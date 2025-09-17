@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section className="py-20 md:py-32 bg-secondary">
       <div className="container grid md:grid-cols-2 gap-10 items-center">
-        <div className="text-center md:text-left animate-in fade-in-0 slide-in-from-bottom-12 duration-1000 order-2 md:order-1">
+        <div className="text-center md:text-left animate-in fade-in-0 slide-in-from-bottom-12 duration-1000">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold mb-4 tracking-tight">
             Welcome to SkillSlate
           </h1>
@@ -22,7 +22,7 @@ export function HeroSection() {
             </Button>
           </div>
         </div>
-        <div className="flex justify-center animate-in fade-in-0 zoom-in-95 duration-1000 order-1 md:order-2">
+        <div className="flex justify-center animate-in fade-in-0 zoom-in-95 duration-1000 order-first md:order-last">
           <Image
             src="/profile.jpg"
             alt="Your Name"
