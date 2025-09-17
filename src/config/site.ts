@@ -30,6 +30,13 @@ export const projects: Project[] = [
     imageHint: 'ai resume',
     demoUrl: '#',
   },
+  {
+    title: 'Project Gamma',
+    description: 'A placeholder description for the third project. This can be updated with the actual project details.',
+    imageUrl: 'https://picsum.photos/seed/project-3/600/400',
+    imageHint: 'code screen',
+    repoUrl: '#',
+  },
 ];
 
 export const technicalSkills: Skill[] = [
