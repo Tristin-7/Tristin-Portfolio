@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-person",
+      "description": "A professional person smiling in a modern office environment.",
+      "imageUrl": "https://picsum.photos/seed/hero-person/1200/800",
+      "imageHint": "professional person"
+    },
+    {
+      "id": "project-1",
+      "description": "A screenshot of a modern web application dashboard.",
+      "imageUrl": "https://picsum.photos/seed/project-1/600/400",
+      "imageHint": "web application"
+    },
+    {
+      "id": "project-2",
+      "description": "A mobile app interface design shown on a smartphone.",
+      "imageUrl": "https://picsum.photos/seed/project-2/600/400",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "project-3",
+      "description": "Code on a computer screen in a dark room.",
+      "imageUrl": "https://picsum.photos/seed/project-3/600/400",
+      "imageHint": "code screen"
+    }
+  ]
 }
