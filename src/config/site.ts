@@ -18,8 +18,8 @@ export const projects: Project[] = [
   {
     title: 'Vehicle Classifier',
     description: 'A cutting-edge web application that classifies vehicles using machine learning. Built with React and Node.js.',
-    imageUrl: 'https://picsum.photos/seed/project-1/600/400',
-    imageHint: 'web application',
+    imageUrl: '/project 2 ai resume builder.png',
+    imageHint: 'ai resume builder',
     demoUrl: '#',
     repoUrl: '#',
   },

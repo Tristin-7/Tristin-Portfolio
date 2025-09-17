@@ -23,6 +23,12 @@
       "description": "Code on a computer screen in a dark room.",
       "imageUrl": "https://picsum.photos/seed/project-3/600/400",
       "imageHint": "code screen"
+    },
+    {
+      "id": "ai-resume-builder",
+      "description": "An AI-powered resume builder application interface.",
+      "imageUrl": "/project 2 ai resume builder.png",
+      "imageHint": "ai resume"
     }
   ]
 }
