@@ -36,6 +36,7 @@ export const projects: Project[] = [
     description: 'A web application that analyzes news headlines and determines the sentiment of the news.',
     imageUrl: '/project 3 Sentiment Navigator.png',
     imageHint: 'news sentiment',
+    demoUrl: '#',
     repoUrl: '#',
   },
 ];
