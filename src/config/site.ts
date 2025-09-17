@@ -16,8 +16,8 @@ export const socialLinks: SocialLink[] = [
 
 export const projects: Project[] = [
   {
-    title: 'Project Alpha',
-    description: 'A cutting-edge web application that solves a modern problem with a clean and intuitive user interface. Built with React and Node.js.',
+    title: 'Vehicle Classifier',
+    description: 'A cutting-edge web application that classifies vehicles using machine learning. Built with React and Node.js.',
     imageUrl: 'https://picsum.photos/seed/project-1/600/400',
     imageHint: 'web application',
     demoUrl: '#',
