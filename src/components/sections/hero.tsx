@@ -21,7 +21,7 @@ export function HeroSection() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tight">
             Tristin Van Der Lingen
           </h1>
-          <p className="text-2xl md:text-3xl text-primary font-medium mt-2 mb-4">systems support associate</p>
+          <p className="text-2xl md:text-3xl text-primary font-medium mt-2 mb-4">System Support Associate</p>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             A creative developer showcasing modern web solutions. Explore my projects and get in touch to collaborate.
           </p>
