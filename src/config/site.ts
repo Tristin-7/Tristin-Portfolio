@@ -18,8 +18,8 @@ export const projects: Project[] = [
   {
     title: 'Vehicle Classifier',
     description: 'A cutting-edge web application that classifies vehicles using machine learning. Built with React and Node.js.',
-    imageUrl: '/project 2 ai resume builder.png',
-    imageHint: 'ai resume builder',
+    imageUrl: '/project 1 Vehicle classifier.png',
+    imageHint: 'vehicle classifier',
     demoUrl: '#',
     repoUrl: '#',
   },
