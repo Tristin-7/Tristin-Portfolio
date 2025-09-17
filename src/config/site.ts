@@ -1,3 +1,4 @@
+
 import type { NavItem, Project, Skill, SocialLink } from '@/lib/types';
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 
@@ -33,7 +34,7 @@ export const projects: Project[] = [
   {
     title: 'News Sentiment Navigator',
     description: 'A web application that analyzes news headlines and determines the sentiment of the news.',
-    imageUrl: 'https://picsum.photos/seed/news-navigator/600/400',
+    imageUrl: '/project 3 Sentiment Navigator.png',
     imageHint: 'news sentiment',
     repoUrl: '#',
   },
