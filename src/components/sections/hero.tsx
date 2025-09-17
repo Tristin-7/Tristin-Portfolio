@@ -19,7 +19,7 @@ export function HeroSection() {
         </div>
         <div className="animate-in fade-in-0 slide-in-from-bottom-12 duration-1000">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold mb-4 tracking-tight">
-            Welcome to SkillSlate
+            Tristin Van Der Lingen
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             A creative developer showcasing modern web solutions. Explore my projects and get in touch to collaborate.
