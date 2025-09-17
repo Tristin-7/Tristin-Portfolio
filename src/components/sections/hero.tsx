@@ -9,19 +9,6 @@ export function HeroSection() {
   return (
     <section className="py-20 md:py-32 bg-secondary">
       <div className="container grid md:grid-cols-2 gap-10 items-center">
-        <div className="flex justify-center animate-in fade-in-0 zoom-in-95 duration-1000">
-          {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              width={300}
-              height={300}
-              className="rounded-full object-cover aspect-square"
-              priority
-              data-ai-hint={heroImage.imageHint}
-            />
-          )}
-        </div>
         <div className="text-center md:text-left animate-in fade-in-0 slide-in-from-bottom-12 duration-1000">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold mb-4 tracking-tight">
             Welcome to SkillSlate
@@ -37,6 +24,19 @@ export function HeroSection() {
               <Link href="#contact">Get in Touch</Link>
             </Button>
           </div>
+        </div>
+        <div className="flex justify-center animate-in fade-in-0 zoom-in-95 duration-1000">
+          {heroImage && (
+            <Image
+              src={heroImage.imageUrl}
+              alt={heroImage.description}
+              width={300}
+              height={300}
+              className="rounded-full object-cover aspect-square"
+              priority
+              data-ai-hint={heroImage.imageHint}
+            />
+          )}
         </div>
       </div>
     </section>
