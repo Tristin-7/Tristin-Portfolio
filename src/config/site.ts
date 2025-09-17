@@ -30,13 +30,6 @@ export const projects: Project[] = [
     imageHint: 'ai resume',
     demoUrl: '#',
   },
-  {
-    title: 'Project Gamma',
-    description: 'An open-source library for data visualization. Simplifies complex datasets into beautiful and interactive charts. Written in TypeScript.',
-    imageUrl: 'https://picsum.photos/seed/project-3/600/400',
-    imageHint: 'code screen',
-    repoUrl: '#',
-  },
 ];
 
 export const technicalSkills: Skill[] = [
