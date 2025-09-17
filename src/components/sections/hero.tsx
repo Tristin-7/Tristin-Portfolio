@@ -22,9 +22,7 @@ export function HeroSection() {
             Tristin Van Der Lingen
           </h1>
           <p className="text-2xl md:text-3xl text-primary font-medium mt-2 mb-4">System Support Associate</p>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            I'm a passionate developer with a knack for building elegant and efficient solutions for the web. My journey in tech is driven by a desire to create impactful digital experiences.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold mt-8 mb-4">About Me</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
               <Link href="#projects">View My Work</Link>
