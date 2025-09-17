@@ -49,10 +49,10 @@ export const technicalSkills: Skill[] = [
 ];
 
 export const softSkills: Skill[] = [
-  { name: 'Problem Solving', level: 95 },
-  { name: 'Communication', level: 90 },
-  { name: 'Teamwork & Collaboration', level: 95 },
-  { name: 'Adaptability', level: 85 },
-  { name: 'Creativity', level: 90 },
-  { name: 'Leadership', level: 80 },
+  { name: 'Technical Communication', level: 95 },
+  { name: 'Professional Communication', level: 90 },
+  { name: 'Team Collaboration', level: 95 },
+  { name: 'Project Management Basics', level: 85 },
+  { name: 'Problem-Solving & Critical Thinking', level: 90 },
+  { name: 'Continuous Learning & Development', level: 95 },
 ];
