@@ -24,10 +24,10 @@ export const projects: Project[] = [
     repoUrl: '#',
   },
   {
-    title: 'Project Beta',
-    description: 'A mobile-first platform for social connectivity. It features real-time chat and a dynamic feed. Developed using Flutter and Firebase.',
-    imageUrl: 'https://picsum.photos/seed/project-2/600/400',
-    imageHint: 'mobile app',
+    title: 'AI Resume Builder',
+    description: 'An intelligent application that helps users create professional resumes with the power of AI. Built with Next.js and Genkit.',
+    imageUrl: '/project 2 ai resume builder.png',
+    imageHint: 'ai resume',
     demoUrl: '#',
   },
   {
