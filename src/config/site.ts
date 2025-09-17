@@ -40,12 +40,12 @@ export const projects: Project[] = [
 ];
 
 export const technicalSkills: Skill[] = [
-  { name: 'JavaScript / TypeScript', level: 95 },
-  { name: 'React / Next.js', level: 90 },
-  { name: 'Node.js / Express', level: 85 },
-  { name: 'HTML & CSS / Tailwind', level: 95 },
-  { name: 'Databases (SQL & NoSQL)', level: 80 },
-  { name: 'Cloud Services (AWS/GCP)', level: 75 },
+  { name: 'System Support & Troubleshooting', level: 90 },
+  { name: 'Html/CSS', level: 85 },
+  { name: 'Machine Learning Fundamentals', level: 80 },
+  { name: 'Artificial Intelligence', level: 80 },
+  { name: 'Cloud Computing Basics', level: 75 },
+  { name: 'Javascript', level: 85 },
 ];
 
 export const softSkills: Skill[] = [
