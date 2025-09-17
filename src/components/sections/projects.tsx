@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { projects } from '@/config/site';
 import type { Project } from '@/lib/types';
-import { Github, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 function ProjectCard({ project, index }: { project: Project, index: number }) {
   return (
@@ -30,13 +30,6 @@ function ProjectCard({ project, index }: { project: Project, index: number }) {
           <Button asChild className="flex-1">
             <Link href={project.demoUrl} target="_blank">
               <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-            </Link>
-          </Button>
-        )}
-        {project.repoUrl && (
-          <Button variant="secondary" asChild className="flex-1">
-            <Link href={project.repoUrl} target="_blank">
-              <Github className="mr-2 h-4 w-4" /> GitHub
             </Link>
           </Button>
         )}

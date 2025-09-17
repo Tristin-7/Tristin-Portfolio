@@ -22,7 +22,6 @@ export const projects: Project[] = [
     imageUrl: '/project 1 Vehicle classifier.png',
     imageHint: 'vehicle classifier',
     demoUrl: '#',
-    repoUrl: '#',
   },
   {
     title: 'AI Resume Builder',
@@ -37,7 +36,6 @@ export const projects: Project[] = [
     imageUrl: '/project 3 Sentiment Navigator.png',
     imageHint: 'news sentiment',
     demoUrl: '#',
-    repoUrl: '#',
   },
 ];
 
