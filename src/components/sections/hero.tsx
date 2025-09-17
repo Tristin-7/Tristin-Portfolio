@@ -1,15 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function HeroSection() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-person');
-
   return (
     <section className="py-20 md:py-32 bg-secondary">
       <div className="container grid md:grid-cols-2 gap-10 items-center">
-        <div className="text-center md:text-left animate-in fade-in-0 slide-in-from-bottom-12 duration-1000">
+        <div className="text-center md:text-left animate-in fade-in-0 slide-in-from-bottom-12 duration-1000 order-2 md:order-1">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold mb-4 tracking-tight">
             Welcome to SkillSlate
           </h1>
@@ -25,18 +22,16 @@ export function HeroSection() {
             </Button>
           </div>
         </div>
-        <div className="flex justify-center animate-in fade-in-0 zoom-in-95 duration-1000">
-          {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              width={300}
-              height={300}
-              className="rounded-full object-cover aspect-square"
-              priority
-              data-ai-hint={heroImage.imageHint}
-            />
-          )}
+        <div className="flex justify-center animate-in fade-in-0 zoom-in-95 duration-1000 order-1 md:order-2">
+          <Image
+            src="/profile.jpg"
+            alt="Your Name"
+            width={300}
+            height={300}
+            className="rounded-full object-cover aspect-square border-4 border-background shadow-lg"
+            priority
+            data-ai-hint="professional person"
+          />
         </div>
       </div>
     </section>
