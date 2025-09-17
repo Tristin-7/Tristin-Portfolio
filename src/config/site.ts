@@ -31,10 +31,10 @@ export const projects: Project[] = [
     demoUrl: '#',
   },
   {
-    title: 'Project Gamma',
-    description: 'A placeholder description for the third project. This can be updated with the actual project details.',
-    imageUrl: 'https://picsum.photos/seed/project-3/600/400',
-    imageHint: 'code screen',
+    title: 'News Sentiment Navigator',
+    description: 'A web application that analyzes news headlines and determines the sentiment of the news.',
+    imageUrl: 'https://picsum.photos/seed/news-navigator/600/400',
+    imageHint: 'news sentiment',
     repoUrl: '#',
   },
 ];
