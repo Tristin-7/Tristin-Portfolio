@@ -23,7 +23,7 @@ export function HeroSection() {
           </h1>
           <p className="text-2xl md:text-3xl text-primary font-medium mt-2 mb-4">System Support Associate</p>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            I am a Systems Support Associate with a strong interest in technology and continuous learning. I am currently enhancing my skills through Coursera courses in machine learning, Python, AI, professional communications, and professional development, while actively working on practical AI projects such as an AI resume builder as part of an AI bootcamp. My goal is to leverage these skills and project experience to contribute to innovative technology solutions and further develop my expertise in AI and related fields.
+            I'm a passionate developer with a knack for building elegant and efficient solutions for the web. My journey in tech is driven by a desire to create impactful digital experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>

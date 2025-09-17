@@ -2,7 +2,6 @@ import type { NavItem, Project, Skill, SocialLink } from '@/lib/types';
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 
 export const navItems: NavItem[] = [
-  { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
