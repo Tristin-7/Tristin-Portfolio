@@ -34,9 +34,8 @@ export interface Experience {
 
 export interface Certificate {
   name: string;
-  issuer: string;
-  date: string;
-  url: string;
+  imageUrl: string;
+  imageHint: string;
 }
 
 export interface Education {

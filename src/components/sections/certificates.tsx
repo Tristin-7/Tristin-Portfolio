@@ -1,8 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { certificates } from "@/config/site";
-import { Award, ExternalLink } from "lucide-react";
-import Link from "next/link";
+import Image from "next/image";
 
 export function CertificatesSection() {
   return (
@@ -18,21 +16,19 @@ export function CertificatesSection() {
           {certificates.map((cert, index) => (
             <Card key={index} className="flex flex-col animate-in fade-in-0 zoom-in-95 duration-500" style={{transitionDelay: `${index * 150}ms`}}>
               <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="space-y-1.5">
-                    <CardTitle className="font-headline text-lg">{cert.name}</CardTitle>
-                    <CardDescription>{cert.issuer} - {cert.date}</CardDescription>
-                  </div>
-                  <Award className="h-8 w-8 text-primary flex-shrink-0" />
-                </div>
+                <CardTitle className="font-headline text-lg">{cert.name}</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow flex items-end">
-                <Button asChild variant="outline" className="w-full">
-                  <Link href={cert.url} target="_blank">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    View Certificate
-                  </Link>
-                </Button>
+              <CardContent className="flex-grow flex items-center justify-center">
+                <div className="relative w-full aspect-[4/3]">
+                  <Image
+                    src={cert.imageUrl}
+                    alt={cert.name}
+                    fill
+                    className="object-contain"
+                    data-ai-hint={cert.imageHint}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
               </CardContent>
             </Card>
           ))}

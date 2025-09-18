@@ -53,21 +53,18 @@ export const experiences: Experience[] = [
 export const certificates: Certificate[] = [
   {
     name: 'Google IT Support Professional Certificate',
-    issuer: 'Coursera',
-    date: '2023',
-    url: '#',
+    imageUrl: 'https://picsum.photos/seed/cert1/800/600',
+    imageHint: 'professional certificate',
   },
   {
     name: 'Foundations of Project Management',
-    issuer: 'Coursera',
-    date: '2023',
-    url: '#',
+    imageUrl: 'https://picsum.photos/seed/cert2/800/600',
+    imageHint: 'project management',
   },
   {
     name: 'AI Essentials',
-    issuer: 'Google',
-    date: '2024',
-    url: '#',
+    imageUrl: 'https://picsum.photos/seed/cert3/800/600',
+    imageHint: 'ai essentials',
   },
 ];
 
