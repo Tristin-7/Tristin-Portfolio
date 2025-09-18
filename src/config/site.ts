@@ -28,7 +28,7 @@ export const projects: Project[] = [
     description: 'An intelligent application that helps users create professional resumes with the power of AI. Built with Next.js and Genkit.',
     imageUrl: '/project 2 ai resume builder.png',
     imageHint: 'ai resume',
-    demoUrl: '#',
+    demoUrl: 'https://tristin-7.github.io/System-Syncers-AI-Resume-Builder/',
   },
   {
     title: 'News Sentiment Navigator',
