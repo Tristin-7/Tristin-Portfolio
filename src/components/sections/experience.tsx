@@ -12,32 +12,29 @@ export function ExperienceSection() {
             My professional journey and key accomplishments.
           </p>
         </div>
-        <div className="relative">
-          <div className="absolute left-1/2 -translate-x-1/2 w-px bg-border h-full" aria-hidden="true" />
-          <div className="space-y-12">
+        <div className="max-w-3xl mx-auto">
+          <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div key={index} className="relative flex items-start group">
-                <div className="flex-shrink-0 absolute left-1/2 -translate-x-1/2 -translate-y-2">
-                  <div className="w-8 h-8 rounded-full bg-background border-2 border-primary flex items-center justify-center">
-                    <Briefcase className="w-4 h-4 text-primary" />
-                  </div>
-                </div>
-                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left ml-auto'}`}>
-                  <Card className="animate-in fade-in-0 zoom-in-95 duration-500">
-                    <CardHeader>
-                      <CardTitle className="font-headline">{exp.role}</CardTitle>
+              <Card key={index} className="animate-in fade-in-0 zoom-in-95 duration-500">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div className="space-y-1.5">
+                      <CardTitle className="font-headline text-xl">{exp.role}</CardTitle>
                       <CardDescription>{exp.company} | {exp.duration}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                        {exp.description.map((point, i) => (
-                          <li key={i}>{point}</li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
+                    </div>
+                    <div className="p-2 bg-secondary rounded-full">
+                      <Briefcase className="w-5 h-5 text-primary" />
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground text-left">
+                    {exp.description.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
