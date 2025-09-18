@@ -45,7 +45,7 @@ export const experiences: Experience[] = [
   {
     role: 'Systems Support Associate',
     company: 'Capaciti',
-    duration: 'Jan 2022 - Present',
+    duration: 'July 2025 - Present',
     description: 'As a Systems Support Associate at Capaciti, I provide IT support while actively applying and expanding my technical skills through hands-on projects. I have contributed to AI-focused initiatives, including the development of an AI resume builder as part of an AI bootcamp, allowing me to apply Python, machine learning, and AI concepts to practical solutions.',
   },
 ];
