@@ -77,17 +77,11 @@ export const certificates: Certificate[] = [
 
 export const education: Education[] = [
     {
-      institution: 'Online Learning Platform',
-      degree: 'Bootcamp Certificate in Artificial Intelligence',
-      duration: '2024',
-      description: 'Completed an intensive AI bootcamp focused on practical projects and real-world applications of machine learning, including an AI resume builder.',
+      institution: 'Elsies River High School',
+      degree: 'National Senior Certificate',
+      duration: '2022',
+      description: 'Successfully completed matriculation.',
     },
-    {
-        institution: 'Coursera',
-        degree: 'Multiple Specializations & Courses',
-        duration: '2023 - Present',
-        description: 'Continuously enhancing my skills through courses in machine learning, Python, AI, professional communications, and professional development.',
-    }
 ];
 
 export const technicalSkills: Skill[] = [
