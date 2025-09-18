@@ -12,7 +12,7 @@ export const socialLinks: SocialLink[] = [
   { name: 'GitHub', url: 'https://github.com', icon: Github },
   { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
   { name: 'Twitter', url: 'https://twitter.com', icon: Twitter },
-  { name: 'Email', url: 'mailto:hello@example.com', icon: Mail },
+  { name: 'Email', url: 'mailto:vanderlingentristin3@gmail.com', icon: Mail },
 ];
 
 export const projects: Project[] = [
