@@ -21,7 +21,7 @@ export const projects: Project[] = [
     description: 'A cutting-edge web application that classifies vehicles using machine learning. Built with React and Node.js.',
     imageUrl: '/project 1 Vehicle classifier.png',
     imageHint: 'vehicle classifier',
-    demoUrl: '#',
+    demoUrl: 'https://tristin-7.github.io/System-Syncers-Vehicle-Classifier/',
   },
   {
     title: 'AI Resume Builder',
