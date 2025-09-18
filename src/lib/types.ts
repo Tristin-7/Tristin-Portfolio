@@ -29,7 +29,7 @@ export interface Experience {
   role: string;
   company: string;
   duration: string;
-  description: string[];
+  description: string;
 }
 
 export interface Certificate {

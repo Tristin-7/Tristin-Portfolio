@@ -44,13 +44,9 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     role: 'Systems Support Associate',
-    company: 'Company Inc.',
+    company: 'Capaciti',
     duration: 'Jan 2022 - Present',
-    description: [
-      'Provided technical assistance and support for incoming queries and issues related to computer systems, software, and hardware.',
-      'Responded to queries either in person or over the phone, and trained computer users.',
-      'Maintained daily performance of computer systems and resolved technical problems with Local Area Networks (LAN), Wide Area Networks (WAN), and other systems.',
-    ],
+    description: 'As a Systems Support Associate at Capaciti, I provide IT support while actively applying and expanding my technical skills through hands-on projects. I have contributed to AI-focused initiatives, including the development of an AI resume builder as part of an AI bootcamp, allowing me to apply Python, machine learning, and AI concepts to practical solutions.',
   },
 ];
 

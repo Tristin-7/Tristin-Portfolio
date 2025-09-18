@@ -28,11 +28,9 @@ export function ExperienceSection() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <ul className="list-disc list-inside space-y-2 text-muted-foreground text-left">
-                    {exp.description.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
+                  <p className="text-muted-foreground text-left">
+                    {exp.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
