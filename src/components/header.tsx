@@ -13,7 +13,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center">
         <div className="mr-auto flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold font-headline text-xl">SkillSlate</span>
+            <span className="font-bold font-headline text-xl">Portfolio</span>
           </Link>
         </div>
 
@@ -46,7 +46,7 @@ export function SiteHeader() {
             <SheetContent side="right">
               <div className="flex flex-col space-y-4 mt-8">
                 <Link href="/" className="mr-6 flex items-center space-x-2">
-                  <span className="font-bold font-headline text-lg">SkillSlate</span>
+                  <span className="font-bold font-headline text-lg">Portfolio</span>
                 </Link>
                 {navItems.map((item) => (
                   <SheetClose asChild key={item.label}>
