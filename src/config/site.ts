@@ -1,10 +1,11 @@
 
-import type { NavItem, Project, Skill, SocialLink, Experience, Certificate } from '@/lib/types';
+import type { NavItem, Project, Skill, SocialLink, Experience, Certificate, Education } from '@/lib/types';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const navItems: NavItem[] = [
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Education', href: '#education' },
   { label: 'Projects', href: '#projects' },
   { label: 'Certificates', href: '#certificates' },
   { label: 'Contact', href: '#contact' },
@@ -72,6 +73,21 @@ export const certificates: Certificate[] = [
     date: '2024',
     url: '#',
   },
+];
+
+export const education: Education[] = [
+    {
+      institution: 'Online Learning Platform',
+      degree: 'Bootcamp Certificate in Artificial Intelligence',
+      duration: '2024',
+      description: 'Completed an intensive AI bootcamp focused on practical projects and real-world applications of machine learning, including an AI resume builder.',
+    },
+    {
+        institution: 'Coursera',
+        degree: 'Multiple Specializations & Courses',
+        duration: '2023 - Present',
+        description: 'Continuously enhancing my skills through courses in machine learning, Python, AI, professional communications, and professional development.',
+    }
 ];
 
 export const technicalSkills: Skill[] = [
