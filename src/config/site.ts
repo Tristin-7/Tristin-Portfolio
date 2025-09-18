@@ -65,6 +65,7 @@ export const certificates: Certificate[] = [
     name: 'AI Essentials',
     imageUrl: '/AIEssentials.png',
     imageHint: 'ai essentials',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/0MDR6369COIG',
   },
 ];
 

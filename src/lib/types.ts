@@ -36,6 +36,7 @@ export interface Certificate {
   name: string;
   imageUrl: string;
   imageHint: string;
+  verifyUrl?: string;
 }
 
 export interface Education {

@@ -35,7 +35,7 @@ export function CertificatesSection() {
               </CardContent>
               <CardFooter>
                 <Button asChild variant="link" className="p-0 h-auto">
-                  <Link href={cert.imageUrl} target="_blank" rel="noopener noreferrer">
+                  <Link href={cert.verifyUrl || cert.imageUrl} target="_blank" rel="noopener noreferrer">
                     View Certificate
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
