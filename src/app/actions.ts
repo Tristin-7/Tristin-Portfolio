@@ -10,7 +10,6 @@ const contactSchema = z.object({
   message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
 });
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 // This should be your own domain, see https://resend.com/docs/send-with-custom-domain
 const fromEmail = process.env.FROM_EMAIL || 'onboarding@resend.dev';
 
@@ -30,6 +29,17 @@ export async function submitContactForm(prevState: any, formData: FormData) {
   }
 
   const { name, email, message } = validatedFields.data;
+
+  if (!process.env.RESEND_API_KEY) {
+    console.error('Resend API key is not set.');
+    return {
+      message: 'The server is not configured to send emails. Please contact the site administrator.',
+      success: false,
+      errors: {},
+    };
+  }
+  
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
     const { data, error } = await resend.emails.send({
