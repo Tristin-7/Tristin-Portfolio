@@ -31,7 +31,7 @@ export function SiteHeader() {
         
         <div className="hidden md:flex flex-1 items-center justify-end space-x-4">
           <Button asChild>
-            <a href="/resume.pdf" download="resume.pdf">Download Resume</a>
+            <a href="/Tristin Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
           </Button>
         </div>
 
@@ -59,7 +59,7 @@ export function SiteHeader() {
                   </SheetClose>
                 ))}
                  <Button asChild className="mt-4">
-                  <a href="/resume.pdf" download="resume.pdf">Download Resume</a>
+                  <a href="/Tristin Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
                 </Button>
               </div>
             </SheetContent>
