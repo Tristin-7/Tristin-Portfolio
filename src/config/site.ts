@@ -52,9 +52,9 @@ export const experiences: Experience[] = [
 
 export const certificates: Certificate[] = [
   {
-    name: 'Google IT Support Professional Certificate',
-    imageUrl: 'https://picsum.photos/seed/cert1/800/600',
-    imageHint: 'professional certificate',
+    name: 'AI Foundations',
+    imageUrl: '/AIFoundations.png',
+    imageHint: 'ai foundations',
   },
   {
     name: 'Foundations of Project Management',
