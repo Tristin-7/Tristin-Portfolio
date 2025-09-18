@@ -77,6 +77,12 @@ export const certificates: Certificate[] = [
 
 export const education: Education[] = [
     {
+      institution: 'Cape Peninsula University of Technology',
+      degree: 'Higher Certificate in ICT',
+      duration: '2024',
+      description: 'Completed a Higher Certificate in Information and Communication Technology.',
+    },
+    {
       institution: 'Elsies River High School',
       degree: 'National Senior Certificate',
       duration: '2022',
