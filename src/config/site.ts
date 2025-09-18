@@ -55,6 +55,7 @@ export const certificates: Certificate[] = [
     name: 'AI Foundations',
     imageUrl: '/AIFoundations.png',
     imageHint: 'ai foundations',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/H4O8RDKZXK1X',
   },
   {
     name: 'Foundations of Project Management',
