@@ -1,6 +1,6 @@
 
 import type { NavItem, Project, Skill, SocialLink } from '@/lib/types';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const navItems: NavItem[] = [
   { label: 'Skills', href: '#skills' },
@@ -11,7 +11,6 @@ export const navItems: NavItem[] = [
 export const socialLinks: SocialLink[] = [
   { name: 'GitHub', url: 'https://github.com/Tristin-7', icon: Github },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/tristin-van-der-lingen-95a067350/', icon: Linkedin },
-  { name: 'Twitter', url: 'https://twitter.com', icon: Twitter },
   { name: 'Email', url: 'https://mail.google.com/mail/?view=cm&fs=1&to=vanderlingentristin3@gmail.com', icon: Mail },
 ];
 
