@@ -58,9 +58,10 @@ export const certificates: Certificate[] = [
     verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/H4O8RDKZXK1X',
   },
   {
-    name: 'Foundations of Project Management',
-    imageUrl: 'https://picsum.photos/seed/cert2/800/600',
-    imageHint: 'project management',
+    name: 'Generative AI with LLMs',
+    imageUrl: '/Generative AI with LLMs.png',
+    imageHint: 'generative ai llms',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/R97A2YUJNO9R',
   },
   {
     name: 'AI Essentials',
