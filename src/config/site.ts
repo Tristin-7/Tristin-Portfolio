@@ -63,7 +63,7 @@ export const certificates: Certificate[] = [
   },
   {
     name: 'AI Essentials',
-    imageUrl: 'https://picsum.photos/seed/cert3/800/600',
+    imageUrl: '/AIEssentials.png',
     imageHint: 'ai essentials',
   },
 ];
