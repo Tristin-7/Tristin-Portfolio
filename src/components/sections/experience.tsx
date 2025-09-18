@@ -16,19 +16,17 @@ export function ExperienceSection() {
           <div className="space-y-8">
             {experiences.map((exp, index) => (
               <Card key={index} className="animate-in fade-in-0 zoom-in-95 duration-500">
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div className="space-y-1.5">
-                      <CardTitle className="font-headline text-xl">{exp.role}</CardTitle>
-                      <CardDescription>{exp.company} | {exp.duration}</CardDescription>
-                    </div>
-                    <div className="p-2 bg-secondary rounded-full">
-                      <Briefcase className="w-5 h-5 text-primary" />
-                    </div>
+                <CardHeader className="items-center text-center">
+                  <div className="p-2 bg-secondary rounded-full">
+                    <Briefcase className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <CardTitle className="font-headline text-xl">{exp.role}</CardTitle>
+                    <CardDescription>{exp.company} | {exp.duration}</CardDescription>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground text-left">
+                  <p className="text-muted-foreground text-center">
                     {exp.description}
                   </p>
                 </CardContent>
