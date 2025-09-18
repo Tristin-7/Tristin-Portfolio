@@ -24,3 +24,17 @@ export interface SocialLink {
   url: string;
   icon: LucideIcon;
 }
+
+export interface Experience {
+  role: string;
+  company: string;
+  duration: string;
+  description: string[];
+}
+
+export interface Certificate {
+  name: string;
+  issuer: string;
+  date: string;
+  url: string;
+}

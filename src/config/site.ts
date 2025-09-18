@@ -1,10 +1,12 @@
 
-import type { NavItem, Project, Skill, SocialLink } from '@/lib/types';
+import type { NavItem, Project, Skill, SocialLink, Experience, Certificate } from '@/lib/types';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const navItems: NavItem[] = [
   { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Certificates', href: '#certificates' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -35,6 +37,40 @@ export const projects: Project[] = [
     imageUrl: '/project 3 Sentiment Navigator.png',
     imageHint: 'news sentiment',
     demoUrl: 'https://9000-firebase-studio-1756966665623.cluster-etsqrqvqyvd4erxx7qq32imrjk.cloudworkstations.dev',
+  },
+];
+
+export const experiences: Experience[] = [
+  {
+    role: 'Systems Support Associate',
+    company: 'Company Inc.',
+    duration: 'Jan 2022 - Present',
+    description: [
+      'Provided technical assistance and support for incoming queries and issues related to computer systems, software, and hardware.',
+      'Responded to queries either in person or over the phone, and trained computer users.',
+      'Maintained daily performance of computer systems and resolved technical problems with Local Area Networks (LAN), Wide Area Networks (WAN), and other systems.',
+    ],
+  },
+];
+
+export const certificates: Certificate[] = [
+  {
+    name: 'Google IT Support Professional Certificate',
+    issuer: 'Coursera',
+    date: '2023',
+    url: '#',
+  },
+  {
+    name: 'Foundations of Project Management',
+    issuer: 'Coursera',
+    date: '2023',
+    url: '#',
+  },
+  {
+    name: 'AI Essentials',
+    issuer: 'Google',
+    date: '2024',
+    url: '#',
   },
 ];
 
