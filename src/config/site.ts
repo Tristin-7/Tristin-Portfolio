@@ -10,7 +10,7 @@ export const navItems: NavItem[] = [
 
 export const socialLinks: SocialLink[] = [
   { name: 'GitHub', url: 'https://github.com', icon: Github },
-  { name: 'LinkedIn', url: 'https://linkedin.com', icon: Linkedin },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/tristin-van-der-lingen-95a067350/', icon: Linkedin },
   { name: 'Twitter', url: 'https://twitter.com', icon: Twitter },
   { name: 'Email', url: 'mailto:vanderlingentristin3@gmail.com', icon: Mail },
 ];
