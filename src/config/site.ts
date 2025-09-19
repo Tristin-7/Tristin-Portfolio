@@ -69,6 +69,24 @@ export const certificates: Certificate[] = [
     imageHint: 'ai essentials',
     verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/0MDR6369COIG',
   },
+  {
+    name: 'AI Foundations',
+    imageUrl: '/AIFoundations.png',
+    imageHint: 'ai foundations',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/H4O8RDKZXK1X',
+  },
+  {
+    name: 'Generative AI with LLMs',
+    imageUrl: '/Generative AI with LLMs.png',
+    imageHint: 'generative ai llms',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/R97A2YUJNO9R',
+  },
+  {
+    name: 'AI Essentials',
+    imageUrl: '/AIEssentials.png',
+    imageHint: 'ai essentials',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/0MDR6369COIG',
+  },
 ];
 
 export const education: Education[] = [
