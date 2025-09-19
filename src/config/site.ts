@@ -76,10 +76,10 @@ export const certificates: Certificate[] = [
     verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/GZOK0II1YP4R',
   },
   {
-    name: 'Generative AI with LLMs',
-    imageUrl: '/Generative AI with LLMs.png',
-    imageHint: 'generative ai llms',
-    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/R97A2YUJNO9R',
+    name: 'Finding Your Professional Voice',
+    imageUrl: '/Finding your professional voice.png',
+    imageHint: 'professional voice',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/DL3JZA92FP92',
   },
   {
     name: 'AI Essentials',
