@@ -82,10 +82,10 @@ export const certificates: Certificate[] = [
     verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/DL3JZA92FP92',
   },
   {
-    name: 'AI Essentials',
-    imageUrl: '/AIEssentials.png',
-    imageHint: 'ai essentials',
-    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/0MDR6369COIG',
+    name: 'Verbal Communications and Presentation Skills',
+    imageUrl: '/Verbal Communications and Presntation Skiils.png',
+    imageHint: 'communication skills',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/HYPJE6IRNND0',
   },
 ];
 
