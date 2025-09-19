@@ -79,7 +79,7 @@ export const certificates: Certificate[] = [
     name: 'Finding Your Professional Voice',
     imageUrl: '/Finding your professional voice.png',
     imageHint: 'professional voice',
-    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/DL3JZA92FP92',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/DL3JZA96FP92',
   },
   {
     name: 'Verbal Communications and Presentation Skills',
