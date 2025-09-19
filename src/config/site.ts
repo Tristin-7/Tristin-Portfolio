@@ -70,10 +70,10 @@ export const certificates: Certificate[] = [
     verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/0MDR6369COIG',
   },
   {
-    name: 'AI Foundations',
-    imageUrl: '/AIFoundations.png',
-    imageHint: 'ai foundations',
-    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/H4O8RDKZXK1X',
+    name: 'Developing Interpersonal Skills',
+    imageUrl: '/Developing Interpersonal Skills.png',
+    imageHint: 'interpersonal skills',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/GZOK0II1YP4R',
   },
   {
     name: 'Generative AI with LLMs',
