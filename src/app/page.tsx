@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { SiteHeader } from '@/components/header';
 import { SiteFooter } from '@/components/footer';
 import { HeroSection } from '@/components/sections/hero';
@@ -17,11 +17,33 @@ type Section = 'hero' | 'skills' | 'experience' | 'education' | 'projects' | 'ce
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<Section>('hero');
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [nextSection, setNextSection] = useState<Section | null>(null);
+
+  const handleSectionChange = (section: Section) => {
+    if (section !== activeSection) {
+      setNextSection(section);
+      setIsTransitioning(true);
+    }
+  };
+
+  useEffect(() => {
+    if (isTransitioning && nextSection) {
+      const timer = setTimeout(() => {
+        setActiveSection(nextSection);
+        setIsTransitioning(false);
+        setNextSection(null);
+      }, 400); 
+
+      return () => clearTimeout(timer);
+    }
+  }, [isTransitioning, nextSection]);
+
 
   const renderSection = () => {
     switch (activeSection) {
       case 'hero':
-        return <HeroSection setActiveSection={setActiveSection} />;
+        return <HeroSection setActiveSection={handleSectionChange} />;
       case 'skills':
         return <SkillsSection />;
       case 'experience':
@@ -35,17 +57,18 @@ export default function Home() {
       case 'contact':
         return <ContactSection />;
       default:
-        return <HeroSection setActiveSection={setActiveSection} />;
+        return <HeroSection setActiveSection={handleSectionChange} />;
     }
   };
 
   return (
     <div className="flex min-h-screen flex-col bg-background/80">
-      <SiteHeader activeSection={activeSection} setActiveSection={setActiveSection} />
+      <SiteHeader activeSection={activeSection} setActiveSection={handleSectionChange} />
       <main className="flex-1 flex flex-col">
         <div 
           className={cn(
-            "flex-1 flex flex-col transition-opacity duration-500 ease-in-out",
+            "flex-1 flex flex-col glitch-wrapper",
+            isTransitioning ? "glitch" : "transition-opacity duration-300 ease-in-out"
           )}
         >
           {renderSection()}

@@ -66,11 +66,11 @@ export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps)
             </SheetTrigger>
             <SheetContent side="right">
               <div className="flex flex-col space-y-4 mt-8">
-                <button onClick={handleLogoClick} className="mr-6 flex items-center space-x-2">
-                   <SheetClose asChild>
+                <SheetClose asChild>
+                  <button onClick={handleLogoClick} className="mr-6 flex items-center space-x-2 text-left">
                     <span className="font-bold font-headline text-lg">Portfolio</span>
-                   </SheetClose>
-                </button>
+                  </button>
+                </SheetClose>
                 {navItems.map((item) => (
                   <SheetClose asChild key={item.label}>
                     <button
