@@ -12,12 +12,12 @@ import { ExperienceSection } from '@/components/sections/experience';
 import { CertificatesSection } from '@/components/sections/certificates';
 import { EducationSection } from '@/components/sections/education';
 import { cn } from '@/lib/utils';
-import './magnetic.css';
 
 type Section = 'hero' | 'skills' | 'experience' | 'education' | 'projects' | 'certificates' | 'contact';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<Section>('hero');
+  const [nextSection, setNextSection] = useState<Section | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
   const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
@@ -29,32 +29,21 @@ export default function Home() {
       } else {
         setClickPosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
       }
+      setNextSection(section);
       setIsTransitioning(true);
       setIsExiting(true);
     }
   };
 
   const onAnimationEnd = () => {
-    if (isExiting) {
-      setActiveSection((prev) => {
-        const sections: Section[] = ['hero', 'skills', 'experience', 'education', 'projects', 'certificates', 'contact'];
-        const currentIndex = sections.indexOf(prev);
-        // This is a placeholder for the next section logic, as we don't know the exact next one here.
-        // The actual change happens in the click handler. This logic needs to align with `handleSectionChange`.
-        // A better approach would be to store the next section in state.
-        const nextIndex = (currentIndex + 1) % sections.length;
-        return sections[nextIndex];
-      });
+    if (isExiting && nextSection) {
+      setActiveSection(nextSection);
+      setNextSection(null);
       setIsExiting(false);
     } else if (isTransitioning) {
       setIsTransitioning(false);
     }
   };
-
-  useEffect(() => {
-    // This is a simplified example. A more robust implementation might be needed.
-    // The `onAnimationEnd` prop on the transitioning element is the primary driver.
-  }, [isTransitioning, isExiting]);
   
 
   const renderSection = () => {

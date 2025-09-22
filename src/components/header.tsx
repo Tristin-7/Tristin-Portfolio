@@ -2,7 +2,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
@@ -18,7 +17,8 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps) {
   const handleNavClick = (section: string, event: React.MouseEvent) => {
-    setActiveSection(section.substring(1) as Section, event);
+    const sectionName = section.startsWith('#') ? section.substring(1) : section;
+    setActiveSection(sectionName as Section, event);
   };
   
   const handleLogoClick = (event: React.MouseEvent) => {
