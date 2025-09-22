@@ -14,15 +14,18 @@ export function HeroSection() {
       <div className="container relative z-10 flex flex-col items-center text-center gap-10">
         <div className="animate-in fade-in-0 zoom-in-95 duration-1000">
           <div className="relative group">
-            <Image
-              src="/profile-Photoroomblack.png"
-              alt="Your Name"
-              width={300}
-              height={300}
-              className="rounded-full object-cover aspect-square"
-              priority
-              data-ai-hint="professional person"
-            />
+            <div className="absolute -inset-1.5 bg-gradient-to-r from-primary/50 to-primary/80 rounded-full blur-xl opacity-75 animate-pulse group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative rounded-full ring-1 ring-primary/50 p-1 bg-background/80">
+              <Image
+                src="/profile-Photoroomblack.png"
+                alt="Your Name"
+                width={300}
+                height={300}
+                className="rounded-full object-cover aspect-square"
+                priority
+                data-ai-hint="professional person"
+              />
+            </div>
           </div>
         </div>
         <div className="animate-in fade-in-0 slide-in-from-bottom-12 duration-1000 max-w-3xl">
