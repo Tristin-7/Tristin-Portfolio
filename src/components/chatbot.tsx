@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { MessageSquare, X, Send, Bot, User, Loader2 } from 'lucide-react';
+import { Bot, X, Send, User, Loader2 } from 'lucide-react';
 import { portfolioChat, PortfolioChatInput } from '@/ai/flows/portfolio-chat-flow';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 
@@ -70,7 +70,7 @@ export function Chatbot() {
         className="fixed bottom-4 right-4 h-16 w-16 rounded-full shadow-lg z-50"
         size="icon"
       >
-        <MessageSquare className="h-8 w-8" />
+        <Bot className="h-8 w-8" />
         <span className="sr-only">Toggle Chat</span>
       </Button>
 
