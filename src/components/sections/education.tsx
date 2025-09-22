@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { education } from "@/config/site";
 import { GraduationCap } from "lucide-react";
@@ -5,7 +6,7 @@ import MatrixAnimation from "@/components/matrix-animation";
 
 export function EducationSection() {
   return (
-    <section id="education" className="relative py-16 md:py-24 bg-transparent overflow-hidden">
+    <section id="education" className="relative py-16 md:py-24 bg-transparent overflow-hidden flex-1 flex items-center justify-center">
       <div className="absolute inset-0 z-0">
         <MatrixAnimation />
         <div className="absolute inset-0 bg-black/80" />

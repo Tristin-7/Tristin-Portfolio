@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Button } from '@/components/ui/button';
@@ -11,7 +12,7 @@ export function ContactSection() {
   const linkedinLink = socialLinks.find(link => link.name === 'LinkedIn');
 
   return (
-    <section id="contact" className="relative py-16 md:py-24 bg-transparent overflow-hidden">
+    <section id="contact" className="relative py-16 md:py-24 bg-transparent overflow-hidden flex-1 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
             <MatrixAnimation />
             <div className="absolute inset-0 bg-black/80" />

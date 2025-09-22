@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -42,7 +43,7 @@ function ProjectCard({ project, index }: { project: Project, index: number }) {
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="relative py-16 md:py-24 bg-transparent overflow-hidden">
+    <section id="projects" className="relative py-16 md:py-24 bg-transparent overflow-hidden flex-1 flex items-center justify-center">
       <div className="absolute inset-0 z-0">
         <MatrixAnimation />
         <div className="absolute inset-0 bg-black/80" />

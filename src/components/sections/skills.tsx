@@ -1,3 +1,4 @@
+
 import { Progress } from "@/components/ui/progress";
 import { softSkills, technicalSkills } from "@/config/site";
 import type { Skill } from "@/lib/types";
@@ -24,7 +25,7 @@ function SkillCategory({ title, skills }: { title: string, skills: Skill[] }) {
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="relative py-16 md:py-24 bg-transparent overflow-hidden">
+    <section id="skills" className="relative py-16 md:py-24 bg-transparent overflow-hidden flex-1 flex items-center justify-center">
        <div className="absolute inset-0 z-0">
         <MatrixAnimation />
         <div className="absolute inset-0 bg-black/80" />

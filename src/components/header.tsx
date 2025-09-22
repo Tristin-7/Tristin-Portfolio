@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -6,26 +7,46 @@ import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { navItems } from '@/config/site';
+import { cn } from '@/lib/utils';
 
-export function SiteHeader() {
+type Section = 'hero' | 'skills' | 'experience' | 'education' | 'projects' | 'certificates' | 'contact';
+
+interface SiteHeaderProps {
+  activeSection: Section;
+  setActiveSection: (section: Section) => void;
+}
+
+export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps) {
+  const handleNavClick = (section: string) => {
+    // Type assertion to make sure the section is a valid Section
+    setActiveSection(section.substring(1) as Section);
+  };
+  
+  const handleLogoClick = () => {
+    setActiveSection('hero');
+  }
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="mr-auto flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+          <button onClick={handleLogoClick} className="mr-6 flex items-center space-x-2">
             <span className="font-bold font-headline text-xl">Portfolio</span>
-          </Link>
+          </button>
         </div>
 
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navItems.map((item) => (
-            <Link
+            <button
               key={item.label}
-              href={item.href}
-              className="transition-colors hover:text-primary"
+              onClick={() => handleNavClick(item.href)}
+              className={cn(
+                "transition-colors hover:text-primary",
+                activeSection === item.href.substring(1) ? "text-primary" : ""
+              )}
             >
               {item.label}
-            </Link>
+            </button>
           ))}
         </nav>
         
@@ -45,17 +66,22 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="flex flex-col space-y-4 mt-8">
-                <Link href="/" className="mr-6 flex items-center space-x-2">
-                  <span className="font-bold font-headline text-lg">Portfolio</span>
-                </Link>
+                <button onClick={handleLogoClick} className="mr-6 flex items-center space-x-2">
+                   <SheetClose asChild>
+                    <span className="font-bold font-headline text-lg">Portfolio</span>
+                   </SheetClose>
+                </button>
                 {navItems.map((item) => (
                   <SheetClose asChild key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="text-lg transition-colors hover:text-primary"
+                    <button
+                      onClick={() => handleNavClick(item.href)}
+                      className={cn(
+                        "text-lg transition-colors hover:text-primary text-left",
+                         activeSection === item.href.substring(1) ? "text-primary" : ""
+                      )}
                     >
                       {item.label}
-                    </Link>
+                    </button>
                   </SheetClose>
                 ))}
                  <Button asChild className="mt-4">

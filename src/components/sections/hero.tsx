@@ -1,11 +1,18 @@
+
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import MatrixAnimation from '@/components/matrix-animation';
 
-export function HeroSection() {
+type Section = 'hero' | 'skills' | 'experience' | 'education' | 'projects' | 'certificates' | 'contact';
+
+interface HeroSectionProps {
+  setActiveSection: (section: Section) => void;
+}
+
+
+export function HeroSection({ setActiveSection }: HeroSectionProps) {
   return (
-    <section className="relative py-20 md:py-32 bg-transparent overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-transparent overflow-hidden flex-1 flex items-center justify-center">
       <div className="absolute inset-0 z-0">
         <MatrixAnimation />
         <div className="absolute inset-0 bg-black/80" />
@@ -36,11 +43,11 @@ export function HeroSection() {
             I am a Systems Support Associate with a strong interest in technology and continuous learning. I am currently enhancing my skills through Coursera courses in machine learning, Python, AI, professional communications, and professional development, while actively working on practical AI projects such as an AI resume builder as part of an AI bootcamp. My goal is to leverage these skills and project experience to contribute to innovative technology solutions and further develop my expertise in AI and related fields.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link href="#projects">View My Work</Link>
+            <Button size="lg" onClick={() => setActiveSection('projects')}>
+              View My Work
             </Button>
-            <Button size="lg" asChild>
-              <Link href="#contact">Get in Touch</Link>
+            <Button size="lg" onClick={() => setActiveSection('contact')}>
+              Get in Touch
             </Button>
           </div>
         </div>

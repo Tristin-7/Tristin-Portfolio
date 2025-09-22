@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { certificates } from "@/config/site";
 import Image from "next/image";
@@ -8,7 +9,7 @@ import MatrixAnimation from "@/components/matrix-animation";
 
 export function CertificatesSection() {
   return (
-    <section id="certificates" className="relative py-16 md:py-24 bg-transparent overflow-hidden">
+    <section id="certificates" className="relative py-16 md:py-24 bg-transparent overflow-hidden flex-1 flex items-center justify-center">
        <div className="absolute inset-0 z-0">
         <MatrixAnimation />
         <div className="absolute inset-0 bg-black/80" />
