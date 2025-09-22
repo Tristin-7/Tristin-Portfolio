@@ -15,7 +15,7 @@ export function HeroSection() {
         <div className="animate-in fade-in-0 zoom-in-95 duration-1000">
           <div className="relative group">
             <Image
-              src="/profile-Photoroom (2).png"
+              src="/profile-Photoroomblack.png"
               alt="Your Name"
               width={300}
               height={300}
