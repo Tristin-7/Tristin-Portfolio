@@ -12,8 +12,11 @@ import { ExperienceSection } from '@/components/sections/experience';
 import { CertificatesSection } from '@/components/sections/certificates';
 import { EducationSection } from '@/components/sections/education';
 import { cn } from '@/lib/utils';
+import { navItems } from '@/config/site';
 
 type Section = 'hero' | 'skills' | 'experience' | 'education' | 'projects' | 'certificates' | 'contact';
+
+const sectionOrder: Section[] = ['hero', ...navItems.map(item => item.href.substring(1) as Section)];
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<Section>('hero');
@@ -22,9 +25,9 @@ export default function Home() {
   const [isExiting, setIsExiting] = useState(false);
   const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
 
-  const handleSectionChange = (section: Section, event?: React.MouseEvent) => {
+  const handleSectionChange = (section: Section, event?: React.MouseEvent | KeyboardEvent) => {
     if (section !== activeSection && !isTransitioning) {
-      if (event) {
+      if (event && 'clientX' in event) {
         setClickPosition({ x: event.clientX, y: event.clientY });
       } else {
         setClickPosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
@@ -34,6 +37,31 @@ export default function Home() {
       setIsExiting(true);
     }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (isTransitioning) return;
+
+      const currentIndex = sectionOrder.indexOf(activeSection);
+      let newIndex = -1;
+
+      if (event.key === 'ArrowRight') {
+        newIndex = (currentIndex + 1) % sectionOrder.length;
+      } else if (event.key === 'ArrowLeft') {
+        newIndex = (currentIndex - 1 + sectionOrder.length) % sectionOrder.length;
+      }
+      
+      if (newIndex !== -1) {
+        handleSectionChange(sectionOrder[newIndex], event);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [activeSection, isTransitioning]);
 
   const onAnimationEnd = () => {
     if (isExiting && nextSection) {
