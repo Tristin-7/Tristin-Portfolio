@@ -4,8 +4,18 @@ import { Button } from '@/components/ui/button';
 
 export function HeroSection() {
   return (
-    <section className="py-20 md:py-32 bg-secondary">
-      <div className="container flex flex-col items-center text-center gap-10">
+    <section className="relative py-20 md:py-32 bg-secondary overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-secondary" />
+        <div className="absolute inset-0 animate-grid-pan" style={{backgroundImage: 'linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px), linear-gradient(to right, hsl(var(--primary) / 0.1) 1px, transparent 1px)', backgroundSize: '40px 40px'}} />
+        <div className="orb-container">
+          {Array.from({ length: 15 }).map((_, i) => (
+            <div key={i} className="orb" />
+          ))}
+        </div>
+      </div>
+
+      <div className="container relative z-10 flex flex-col items-center text-center gap-10">
         <div className="animate-in fade-in-0 zoom-in-95 duration-1000">
           <div className="relative group">
             <Image
