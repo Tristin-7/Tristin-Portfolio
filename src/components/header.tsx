@@ -30,7 +30,7 @@ export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps)
       <div className="container flex h-16 items-center">
         <div className="mr-auto flex">
           <button onClick={handleLogoClick} className="mr-6 flex items-center space-x-2">
-            <span className="font-bold font-headline text-xl">Portfolio</span>
+            <span className="font-bold font-headline text-xl">Tristin</span>
           </button>
         </div>
 
@@ -67,7 +67,7 @@ export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps)
               <div className="flex flex-col space-y-4 mt-8">
                 <SheetClose asChild>
                   <button onClick={handleLogoClick} className="mr-6 flex items-center space-x-2 text-left">
-                    <span className="font-bold font-headline text-lg">Portfolio</span>
+                    <span className="font-bold font-headline text-lg">Tristin</span>
                   </button>
                 </SheetClose>
                 {navItems.map((item) => (
