@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import MatrixAnimation from '@/components/matrix-animation';
+import { Chatbot } from '@/components/chatbot';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -25,6 +26,7 @@ export default function RootLayout({
         <div className="relative z-10">
           {children}
         </div>
+        <Chatbot />
         <Toaster />
       </body>
     </html>
