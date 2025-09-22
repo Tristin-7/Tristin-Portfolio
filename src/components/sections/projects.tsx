@@ -8,7 +8,7 @@ import { ExternalLink } from 'lucide-react';
 
 function ProjectCard({ project, index }: { project: Project, index: number }) {
   return (
-    <Card className="flex flex-col overflow-hidden animate-in fade-in-0 zoom-in-95 duration-500" style={{transitionDelay: `${index * 150}ms`}}>
+    <Card className="flex flex-col overflow-hidden animate-in fade-in-0 zoom-in-95 duration-500 border-primary/50 shadow-lg shadow-primary/20" style={{transitionDelay: `${index * 150}ms`}}>
       <div className="relative aspect-video">
         <Image
           src={project.imageUrl}
