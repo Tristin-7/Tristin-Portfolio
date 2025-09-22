@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import MatrixAnimation from '@/components/matrix-animation';
 
 export function HeroSection() {
   return (
     <section className="relative py-20 md:py-32 bg-secondary overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-secondary" />
-        <div className="absolute inset-0 animate-grid-pan" style={{backgroundImage: 'linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px), linear-gradient(to right, hsl(var(--primary) / 0.1) 1px, transparent 1px)', backgroundSize: '40px 40px'}} />
+        <MatrixAnimation />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       <div className="container relative z-10 flex flex-col items-center text-center gap-10">
