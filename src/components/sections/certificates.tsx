@@ -4,11 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { Button } from "../ui/button";
+import MatrixAnimation from "@/components/matrix-animation";
 
 export function CertificatesSection() {
   return (
-    <section id="certificates" className="py-16 md:py-24 bg-secondary">
-      <div className="container">
+    <section id="certificates" className="relative py-16 md:py-24 bg-transparent overflow-hidden">
+       <div className="absolute inset-0 z-0">
+        <MatrixAnimation />
+        <div className="absolute inset-0 bg-black/80" />
+      </div>
+      <div className="container relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-headline font-bold">Licenses & Certifications</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -17,7 +22,7 @@ export function CertificatesSection() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificates.map((cert, index) => (
-            <Card key={index} className="flex flex-col animate-in fade-in-0 zoom-in-95 duration-500 h-full hover:shadow-lg transition-shadow" style={{transitionDelay: `${index * 150}ms`}}>
+            <Card key={index} className="flex flex-col animate-in fade-in-0 zoom-in-95 duration-500 h-full hover:shadow-lg transition-shadow bg-background/80" style={{transitionDelay: `${index * 150}ms`}}>
               <CardHeader>
                 <CardTitle className="font-headline text-lg">{cert.name}</CardTitle>
               </CardHeader>

@@ -5,10 +5,10 @@ import MatrixAnimation from '@/components/matrix-animation';
 
 export function HeroSection() {
   return (
-    <section className="relative py-20 md:py-32 bg-secondary overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-transparent overflow-hidden">
       <div className="absolute inset-0 z-0">
         <MatrixAnimation />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/80" />
       </div>
 
       <div className="container relative z-10 flex flex-col items-center text-center gap-10">

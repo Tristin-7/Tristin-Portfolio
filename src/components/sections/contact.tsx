@@ -11,10 +11,10 @@ export function ContactSection() {
   const linkedinLink = socialLinks.find(link => link.name === 'LinkedIn');
 
   return (
-    <section id="contact" className="relative py-16 md:py-24 overflow-hidden">
+    <section id="contact" className="relative py-16 md:py-24 bg-transparent overflow-hidden">
         <div className="absolute inset-0 z-0">
             <MatrixAnimation />
-            <div className="absolute inset-0 bg-black/60" />
+            <div className="absolute inset-0 bg-black/80" />
         </div>
         <div className="container relative z-10">
             <div className="text-center mb-12">

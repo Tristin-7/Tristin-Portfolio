@@ -5,10 +5,11 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { projects } from '@/config/site';
 import type { Project } from '@/lib/types';
 import { ExternalLink } from 'lucide-react';
+import MatrixAnimation from "@/components/matrix-animation";
 
 function ProjectCard({ project, index }: { project: Project, index: number }) {
   return (
-    <Card className="flex flex-col overflow-hidden animate-in fade-in-0 zoom-in-95 duration-500 border-primary/50 shadow-lg shadow-primary/20" style={{transitionDelay: `${index * 150}ms`}}>
+    <Card className="flex flex-col overflow-hidden animate-in fade-in-0 zoom-in-95 duration-500 border-primary/50 shadow-lg shadow-primary/20 bg-background/80" style={{transitionDelay: `${index * 150}ms`}}>
       <div className="relative aspect-video">
         <Image
           src={project.imageUrl}
@@ -41,8 +42,12 @@ function ProjectCard({ project, index }: { project: Project, index: number }) {
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-16 md:py-24 bg-card">
-      <div className="container">
+    <section id="projects" className="relative py-16 md:py-24 bg-transparent overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <MatrixAnimation />
+        <div className="absolute inset-0 bg-black/80" />
+      </div>
+      <div className="container relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-headline font-bold">Featured Projects</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">

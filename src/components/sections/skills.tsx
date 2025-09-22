@@ -1,6 +1,7 @@
 import { Progress } from "@/components/ui/progress";
 import { softSkills, technicalSkills } from "@/config/site";
 import type { Skill } from "@/lib/types";
+import MatrixAnimation from "@/components/matrix-animation";
 
 function SkillCategory({ title, skills }: { title: string, skills: Skill[] }) {
   return (
@@ -23,8 +24,12 @@ function SkillCategory({ title, skills }: { title: string, skills: Skill[] }) {
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-16 md:py-24 bg-secondary">
-      <div className="container">
+    <section id="skills" className="relative py-16 md:py-24 bg-transparent overflow-hidden">
+       <div className="absolute inset-0 z-0">
+        <MatrixAnimation />
+        <div className="absolute inset-0 bg-black/80" />
+      </div>
+      <div className="container relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-headline font-bold">My Skillset</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">A glimpse into the technologies I work with and my professional abilities.</p>
