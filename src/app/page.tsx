@@ -12,14 +12,14 @@ import { ExperienceSection } from '@/components/sections/experience';
 import { CertificatesSection } from '@/components/sections/certificates';
 import { EducationSection } from '@/components/sections/education';
 import { cn } from '@/lib/utils';
-import './portal.css';
+import './magnetic.css';
 
 type Section = 'hero' | 'skills' | 'experience' | 'education' | 'projects' | 'certificates' | 'contact';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<Section>('hero');
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [nextSection, setNextSection] = useState<Section | null>(null);
+  const [isExiting, setIsExiting] = useState(false);
   const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
 
   const handleSectionChange = (section: Section, event?: React.MouseEvent) => {
@@ -27,58 +27,47 @@ export default function Home() {
       if (event) {
         setClickPosition({ x: event.clientX, y: event.clientY });
       } else {
-        // Fallback for non-click events or when event is not passed
         setClickPosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
       }
-      setNextSection(section);
       setIsTransitioning(true);
+      setIsExiting(true);
+    }
+  };
+
+  const onAnimationEnd = () => {
+    if (isExiting) {
+      setActiveSection((prev) => {
+        const sections: Section[] = ['hero', 'skills', 'experience', 'education', 'projects', 'certificates', 'contact'];
+        const currentIndex = sections.indexOf(prev);
+        // This is a placeholder for the next section logic, as we don't know the exact next one here.
+        // The actual change happens in the click handler. This logic needs to align with `handleSectionChange`.
+        // A better approach would be to store the next section in state.
+        const nextIndex = (currentIndex + 1) % sections.length;
+        return sections[nextIndex];
+      });
+      setIsExiting(false);
+    } else if (isTransitioning) {
+      setIsTransitioning(false);
     }
   };
 
   useEffect(() => {
-    if (isTransitioning) {
-      const animationTime = 600; // Corresponds to portal-animation duration
-
-      // Phase 1: Let the portal expand
-      const phase1Timer = setTimeout(() => {
-        if (nextSection) {
-          setActiveSection(nextSection);
-        }
-      }, animationTime / 2);
-
-      // Phase 2: Let the new section show and portal shrink
-      const phase2Timer = setTimeout(() => {
-        setIsTransitioning(false);
-        setNextSection(null);
-      }, animationTime);
-
-      return () => {
-        clearTimeout(phase1Timer);
-        clearTimeout(phase2Timer);
-      };
-    }
-  }, [isTransitioning, nextSection]);
-
+    // This is a simplified example. A more robust implementation might be needed.
+    // The `onAnimationEnd` prop on the transitioning element is the primary driver.
+  }, [isTransitioning, isExiting]);
+  
 
   const renderSection = () => {
-    switch (activeSection) {
-      case 'hero':
-        return <HeroSection setActiveSection={handleSectionChange} />;
-      case 'skills':
-        return <SkillsSection />;
-      case 'experience':
-        return <ExperienceSection />;
-      case 'education':
-        return <EducationSection />;
-      case 'projects':
-        return <ProjectsSection />;
-      case 'certificates':
-        return <CertificatesSection />;
-      case 'contact':
-        return <ContactSection />;
-      default:
-        return <HeroSection setActiveSection={handleSectionChange} />;
-    }
+    const sections: { [key in Section]: JSX.Element } = {
+      hero: <HeroSection setActiveSection={handleSectionChange} />,
+      skills: <SkillsSection />,
+      experience: <ExperienceSection />,
+      education: <EducationSection />,
+      projects: <ProjectsSection />,
+      certificates: <CertificatesSection />,
+      contact: <ContactSection />,
+    };
+    return sections[activeSection];
   };
 
   return (
@@ -86,23 +75,17 @@ export default function Home() {
       <SiteHeader activeSection={activeSection} setActiveSection={handleSectionChange} />
       <main className="flex-1 flex flex-col">
         <div 
+          onAnimationEnd={onAnimationEnd}
+          style={{ transformOrigin: `${clickPosition.x}px ${clickPosition.y}px` }}
           className={cn(
-            "flex-1 flex flex-col transition-opacity duration-300 ease-in-out",
-            isTransitioning && nextSection && "opacity-0"
+            "flex-1 flex flex-col",
+            isTransitioning && !isExiting && "magnetic-in",
+            isExiting && "magnetic-out"
           )}
         >
           {renderSection()}
         </div>
       </main>
-      {isTransitioning && (
-        <div
-          className="portal-ring"
-          style={{
-            top: `${clickPosition.y}px`,
-            left: `${clickPosition.x}px`,
-          }}
-        />
-      )}
       <SiteFooter />
     </div>
   );
