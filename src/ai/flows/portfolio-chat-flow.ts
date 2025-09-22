@@ -65,8 +65,7 @@ const portfolioChatFlow = ai.defineFlow(
     ${question}
     `;
 
-    const llm = ai.model('googleai/gemini-2.5-flash');
-    const response = await llm.generate({
+    const response = await ai.generate({
       history: history.map(h => ({
         role: h.role,
         content: [{text: h.content}]
