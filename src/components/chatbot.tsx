@@ -32,21 +32,25 @@ export function Chatbot() {
   };
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    if (isOpen) {
+        setTimeout(scrollToBottom, 100);
+    }
+  }, [messages, isOpen]);
 
   const handleSend = async () => {
     if (input.trim() === '' || isLoading) return;
 
-    const newMessages: Message[] = [...messages, { role: 'user', content: input }];
+    const userMessage: Message = { role: 'user', content: input };
+    const newMessages: Message[] = [...messages, userMessage];
     setMessages(newMessages);
+    const currentInput = input;
     setInput('');
     setIsLoading(true);
 
     try {
         const chatInput: PortfolioChatInput = {
-            history: newMessages.slice(0, -1).map(m => ({ role: m.role, content: m.content })),
-            question: input,
+            history: messages,
+            question: currentInput,
         };
       
         const response = await portfolioChat(chatInput);
@@ -63,7 +67,7 @@ export function Chatbot() {
     <>
       <Button
         onClick={toggleChat}
-        className="fixed bottom-4 right-4 h-16 w-16 rounded-full shadow-lg"
+        className="fixed bottom-4 right-4 h-16 w-16 rounded-full shadow-lg z-50"
         size="icon"
       >
         <MessageSquare className="h-8 w-8" />
