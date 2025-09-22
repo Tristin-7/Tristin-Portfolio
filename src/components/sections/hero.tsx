@@ -18,7 +18,7 @@ export function HeroSection() {
               alt="Your Name"
               width={300}
               height={300}
-              className="rounded-full object-cover aspect-square border-2 border-primary"
+              className="rounded-full object-cover aspect-square"
               priority
               data-ai-hint="professional person"
             />
