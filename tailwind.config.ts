@@ -96,8 +96,14 @@ export default {
           },
         },
         'glow-tech': {
-          '0%, 100%': { boxShadow: '0 0 5px 2px transparent', 'border-color': 'transparent' },
-          '50%': { boxShadow: '0 0 20px 5px hsl(var(--primary))', 'border-color': 'hsl(var(--primary))' },
+          '0%, 100%': { 
+            boxShadow: '0 0 5px 2px transparent', 
+            borderColor: 'transparent' 
+          },
+          '50%': { 
+            boxShadow: '0 0 20px 5px hsl(var(--primary))',
+            borderColor: 'hsl(var(--primary))' 
+          },
         },
         'glow': {
           '0%, 100%': { boxShadow: '0 0 10px 2px transparent' },

@@ -13,11 +13,10 @@ export function HeroSection() {
               alt="Your Name"
               width={300}
               height={300}
-              className="rounded-full object-cover aspect-square"
+              className="rounded-full object-cover aspect-square border-2 border-transparent animate-glow-tech"
               priority
               data-ai-hint="professional person"
             />
-            <div className="absolute inset-0 rounded-full animate-glow-tech" />
           </div>
         </div>
         <div className="animate-in fade-in-0 slide-in-from-bottom-12 duration-1000 max-w-3xl">
