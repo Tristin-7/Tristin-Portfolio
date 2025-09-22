@@ -7,15 +7,18 @@ export function HeroSection() {
     <section className="py-20 md:py-32 bg-secondary">
       <div className="container flex flex-col items-center text-center gap-10">
         <div className="animate-in fade-in-0 zoom-in-95 duration-1000">
-          <Image
-            src="/profile.jpg"
-            alt="Your Name"
-            width={300}
-            height={300}
-            className="rounded-full object-cover aspect-square animate-glow"
-            priority
-            data-ai-hint="professional person"
-          />
+          <div className="relative group">
+            <Image
+              src="/profile.jpg"
+              alt="Your Name"
+              width={300}
+              height={300}
+              className="rounded-full object-cover aspect-square"
+              priority
+              data-ai-hint="professional person"
+            />
+            <div className="absolute inset-0 rounded-full animate-glow-tech" />
+          </div>
         </div>
         <div className="animate-in fade-in-0 slide-in-from-bottom-12 duration-1000 max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tight">

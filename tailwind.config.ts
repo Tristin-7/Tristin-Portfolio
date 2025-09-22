@@ -95,6 +95,10 @@ export default {
             height: '0',
           },
         },
+        'glow-tech': {
+          '0%, 100%': { boxShadow: '0 0 5px 2px transparent', 'border-color': 'transparent' },
+          '50%': { boxShadow: '0 0 20px 5px hsl(var(--primary))', 'border-color': 'hsl(var(--primary))' },
+        },
         'glow': {
           '0%, 100%': { boxShadow: '0 0 10px 2px transparent' },
           '50%': { boxShadow: '0 0 35px 5px hsl(var(--primary))' },
@@ -104,6 +108,7 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'glow': 'glow 2.5s ease-in-out infinite',
+        'glow-tech': 'glow-tech 2s ease-in-out infinite',
       },
     },
   },
