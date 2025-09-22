@@ -96,7 +96,7 @@ export default {
           },
         },
         'glow': {
-          '0%, 100%': { boxShadow: '0 0 20px hsl(var(--primary))' },
+          '0%, 100%': { boxShadow: '0 0 10px hsl(var(--primary), 0.2)' },
           '50%': { boxShadow: '0 0 35px hsl(var(--primary))' },
         }
       },
