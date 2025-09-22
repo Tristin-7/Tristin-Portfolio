@@ -12,7 +12,7 @@ export function HeroSection() {
             alt="Your Name"
             width={300}
             height={300}
-            className="rounded-full object-cover aspect-square border-4 border-primary shadow-lg transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary))]"
+            className="rounded-full object-cover aspect-square border-4 border-transparent shadow-lg transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_hsl(var(--primary))]"
             priority
             data-ai-hint="professional person"
           />
