@@ -12,7 +12,7 @@ export function HeroSection() {
             alt="Your Name"
             width={300}
             height={300}
-            className="rounded-full object-cover aspect-square border-4 border-primary shadow-[0_0_20px_hsl(var(--primary))] animate-glow"
+            className="rounded-full object-cover aspect-square shadow-[0_0_20px_hsl(var(--primary))] animate-glow"
             priority
             data-ai-hint="professional person"
           />
