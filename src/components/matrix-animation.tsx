@@ -13,6 +13,9 @@ const MatrixAnimation: React.FC = () => {
     if (!ctx) return;
 
     let animationFrameId: number;
+    let lastTime = 0;
+    const fps = 15;
+    const interval = 1000 / fps;
 
     const resizeCanvas = () => {
         canvas.width = window.innerWidth;
@@ -37,7 +40,7 @@ const MatrixAnimation: React.FC = () => {
 
 
     const draw = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.fillStyle = `hsl(${primaryH}, ${primaryS}%, ${primaryL}%)`;
@@ -54,8 +57,12 @@ const MatrixAnimation: React.FC = () => {
       }
     };
 
-    const animate = () => {
-      draw();
+    const animate = (timestamp: number) => {
+      const deltaTime = timestamp - lastTime;
+      if (deltaTime > interval) {
+        lastTime = timestamp - (deltaTime % interval);
+        draw();
+      }
       animationFrameId = window.requestAnimationFrame(animate);
     };
 
@@ -70,7 +77,7 @@ const MatrixAnimation: React.FC = () => {
     observer.observe(document.documentElement, { attributes: true });
 
 
-    animate();
+    animate(0);
 
     return () => {
       window.cancelAnimationFrame(animationFrameId);
