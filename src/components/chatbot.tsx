@@ -75,7 +75,7 @@ export function Chatbot() {
       </Button>
 
       {isOpen && (
-        <Card className="fixed bottom-24 right-4 w-80 h-[28rem] flex flex-col shadow-lg z-50 bg-background/90 backdrop-blur-sm">
+        <Card className="fixed bottom-24 right-4 w-full max-w-sm sm:w-80 h-[28rem] flex flex-col shadow-lg z-50 bg-background/90 backdrop-blur-sm">
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle className="font-headline text-lg flex items-center gap-2">
               <Bot /> AI Assistant
