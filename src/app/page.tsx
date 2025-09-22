@@ -12,6 +12,7 @@ import { ExperienceSection } from '@/components/sections/experience';
 import { CertificatesSection } from '@/components/sections/certificates';
 import { EducationSection } from '@/components/sections/education';
 import { cn } from '@/lib/utils';
+import './portal.css';
 
 type Section = 'hero' | 'skills' | 'experience' | 'education' | 'projects' | 'certificates' | 'contact';
 
@@ -19,23 +20,42 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState<Section>('hero');
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [nextSection, setNextSection] = useState<Section | null>(null);
+  const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
 
-  const handleSectionChange = (section: Section) => {
-    if (section !== activeSection) {
+  const handleSectionChange = (section: Section, event?: React.MouseEvent) => {
+    if (section !== activeSection && !isTransitioning) {
+      if (event) {
+        setClickPosition({ x: event.clientX, y: event.clientY });
+      } else {
+        // Fallback for non-click events or when event is not passed
+        setClickPosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+      }
       setNextSection(section);
       setIsTransitioning(true);
     }
   };
 
   useEffect(() => {
-    if (isTransitioning && nextSection) {
-      const timer = setTimeout(() => {
-        setActiveSection(nextSection);
+    if (isTransitioning) {
+      const animationTime = 600; // Corresponds to portal-animation duration
+
+      // Phase 1: Let the portal expand
+      const phase1Timer = setTimeout(() => {
+        if (nextSection) {
+          setActiveSection(nextSection);
+        }
+      }, animationTime / 2);
+
+      // Phase 2: Let the new section show and portal shrink
+      const phase2Timer = setTimeout(() => {
         setIsTransitioning(false);
         setNextSection(null);
-      }, 400); 
+      }, animationTime);
 
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(phase1Timer);
+        clearTimeout(phase2Timer);
+      };
     }
   }, [isTransitioning, nextSection]);
 
@@ -67,13 +87,22 @@ export default function Home() {
       <main className="flex-1 flex flex-col">
         <div 
           className={cn(
-            "flex-1 flex flex-col glitch-wrapper",
-            isTransitioning ? "glitch" : "transition-opacity duration-300 ease-in-out"
+            "flex-1 flex flex-col transition-opacity duration-300 ease-in-out",
+            isTransitioning && nextSection && "opacity-0"
           )}
         >
           {renderSection()}
         </div>
       </main>
+      {isTransitioning && (
+        <div
+          className="portal-ring"
+          style={{
+            top: `${clickPosition.y}px`,
+            left: `${clickPosition.x}px`,
+          }}
+        />
+      )}
       <SiteFooter />
     </div>
   );

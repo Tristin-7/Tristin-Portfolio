@@ -13,17 +13,16 @@ type Section = 'hero' | 'skills' | 'experience' | 'education' | 'projects' | 'ce
 
 interface SiteHeaderProps {
   activeSection: Section;
-  setActiveSection: (section: Section) => void;
+  setActiveSection: (section: Section, event?: React.MouseEvent) => void;
 }
 
 export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps) {
-  const handleNavClick = (section: string) => {
-    // Type assertion to make sure the section is a valid Section
-    setActiveSection(section.substring(1) as Section);
+  const handleNavClick = (section: string, event: React.MouseEvent) => {
+    setActiveSection(section.substring(1) as Section, event);
   };
   
-  const handleLogoClick = () => {
-    setActiveSection('hero');
+  const handleLogoClick = (event: React.MouseEvent) => {
+    setActiveSection('hero', event);
   }
 
   return (
@@ -39,7 +38,7 @@ export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps)
           {navItems.map((item) => (
             <button
               key={item.label}
-              onClick={() => handleNavClick(item.href)}
+              onClick={(e) => handleNavClick(item.href, e)}
               className={cn(
                 "transition-colors hover:text-primary",
                 activeSection === item.href.substring(1) ? "text-primary" : ""
@@ -74,7 +73,7 @@ export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps)
                 {navItems.map((item) => (
                   <SheetClose asChild key={item.label}>
                     <button
-                      onClick={() => handleNavClick(item.href)}
+                      onClick={(e) => handleNavClick(item.href, e)}
                       className={cn(
                         "text-lg transition-colors hover:text-primary text-left",
                          activeSection === item.href.substring(1) ? "text-primary" : ""

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import './glitch.css';
+import './portal.css';
 import { Toaster } from '@/components/ui/toaster';
 import MatrixAnimation from '@/components/matrix-animation';
 import { Chatbot } from '@/components/chatbot';

@@ -1,0 +1,27 @@
+
+@keyframes portal-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+}
+
+.portal-ring {
+  position: fixed;
+  z-index: 9999;
+  border-radius: 50%;
+  width: 100vmax;
+  height: 100vmax;
+  border: 5px solid hsl(var(--primary));
+  box-shadow: 0 0 20px hsl(var(--primary)), 0 0 40px hsl(var(--primary)) inset;
+  animation: portal-animation 600ms ease-in-out forwards;
+  pointer-events: none;
+}
