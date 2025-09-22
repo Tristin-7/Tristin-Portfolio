@@ -113,13 +113,6 @@ export default {
           '0%': { backgroundPosition: '0% 0%' },
           '100%': { backgroundPosition: '40px 40px' },
         },
-        'float': {
-          '0%': { transform: 'translate(0, 0) scale(1)', opacity: '0.7' },
-          '25%': { transform: 'translate(20px, 40px) scale(1.1)', opacity: '0.5' },
-          '50%': { transform: 'translate(-30px, -10px) scale(0.9)', opacity: '0.8' },
-          '75%': { transform: 'translate(10px, -30px) scale(1.2)', opacity: '0.6' },
-          '100%': { transform: 'translate(0, 0) scale(1)', opacity: '0.7' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
