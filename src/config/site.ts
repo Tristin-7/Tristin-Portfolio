@@ -34,7 +34,7 @@ export const projects: Project[] = [
   },
   {
     title: 'News Sentiment Navigator',
-    description: 'A web application that analyzes news headlines and determines the sentiment of the news.',
+    description: 'A web application that analyzes news headlines and determines the sentiment of the news. Built with Firebase Studio',
     imageUrl: '/project 3 Sentiment Navigator.png',
     imageHint: 'news sentiment',
     demoUrl: 'https://9000-firebase-studio-1756966665623.cluster-etsqrqvqyvd4erxx7qq32imrjk.cloudworkstations.dev',
