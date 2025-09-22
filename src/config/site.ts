@@ -20,7 +20,7 @@ export const socialLinks: SocialLink[] = [
 export const projects: Project[] = [
   {
     title: 'Vehicle Classifier',
-    description: 'A cutting-edge web application that classifies vehicles using machine learning. Built with React and Node.js.',
+    description: 'A cutting-edge web application that classifies vehicles using machine learning. Built with Google Teachable Machine.',
     imageUrl: '/project 1 Vehicle classifier.png',
     imageHint: 'vehicle classifier',
     demoUrl: 'https://tristin-7.github.io/System-Syncers-Vehicle-Classifier/',
