@@ -55,7 +55,7 @@ export function BinaryRain() {
       }
     }
 
-    const interval = setInterval(draw, 33);
+    const interval = setInterval(draw, 50);
 
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
