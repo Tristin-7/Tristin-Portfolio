@@ -9,7 +9,9 @@ body {
 }
 
 html[data-theme='creative'] body {
+  background-image: radial-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
+  animation: grid-pan 3s linear infinite;
 }
 
 html[data-theme='professional'] body {
