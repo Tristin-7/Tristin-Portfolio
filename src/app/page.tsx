@@ -35,6 +35,10 @@ export default function Home() {
 
   const handleSectionChange = (section: Section, event?: React.MouseEvent | KeyboardEvent) => {
     if (section !== activeSection && !isTransitioning) {
+      if (theme === 'professional') {
+        setActiveSection(section);
+        return;
+      }
       if (event && 'clientX' in event) {
         setClickPosition({ x: event.clientX, y: event.clientY });
       } else {
@@ -69,7 +73,7 @@ export default function Home() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [activeSection, isTransitioning]);
+  }, [activeSection, isTransitioning, theme]);
 
   const onAnimationEnd = () => {
     if (isExiting && nextSection) {
@@ -99,8 +103,11 @@ export default function Home() {
     return null;
   }
 
+  const isCreative = theme === 'creative';
+  const shouldAnimate = isCreative && isTransitioning;
+
   return (
-    <div className={cn("flex min-h-screen flex-col", theme === 'creative' ? 'bg-background/80' : 'bg-background')}>
+    <div className={cn("flex min-h-screen flex-col", isCreative ? 'bg-background/80' : 'bg-background')}>
       <SiteHeader activeSection={activeSection} setActiveSection={handleSectionChange} />
       <main className="flex-1 flex flex-col">
         <div 
@@ -108,8 +115,8 @@ export default function Home() {
           style={{ transformOrigin: `${clickPosition.x}px ${clickPosition.y}px` }}
           className={cn(
             "flex-1 flex flex-col",
-            isTransitioning && !isExiting && "magnetic-in",
-            isExiting && "magnetic-out"
+            shouldAnimate && !isExiting && "magnetic-in",
+            shouldAnimate && isExiting && "magnetic-out"
           )}
         >
           {renderSection()}
