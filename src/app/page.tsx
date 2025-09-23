@@ -26,6 +26,12 @@ export default function Home() {
   const [isExiting, setIsExiting] = useState(false);
   const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
 
   const handleSectionChange = (section: Section, event?: React.MouseEvent | KeyboardEvent) => {
     if (section !== activeSection && !isTransitioning) {
@@ -88,6 +94,10 @@ export default function Home() {
     };
     return sections[activeSection];
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className={cn("flex min-h-screen flex-col", theme === 'matrix' ? 'bg-background/80' : 'bg-background')}>

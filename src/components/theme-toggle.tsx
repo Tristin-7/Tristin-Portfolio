@@ -9,9 +9,18 @@ import { Switch } from "@/components/ui/switch"
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const toggleTheme = () => {
     setTheme(theme === "matrix" ? "professional" : "matrix")
+  }
+
+  if (!mounted) {
+    return null
   }
 
   return (
