@@ -7,6 +7,7 @@ import { projects } from '@/config/site';
 import type { Project } from '@/lib/types';
 import { ExternalLink } from 'lucide-react';
 import MatrixAnimation from "@/components/matrix-animation";
+import { DecodeText } from '../decode-text';
 
 function ProjectCard({ project, index }: { project: Project, index: number }) {
   return (
@@ -50,7 +51,7 @@ export function ProjectsSection() {
       </div>
       <div className="container relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">Featured Projects</h2>
+          <DecodeText text="Featured Projects" className="text-3xl md:text-4xl font-headline font-bold" />
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Here are some of the projects I'm proud to have worked on.
           </p>

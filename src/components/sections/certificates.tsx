@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { Button } from "../ui/button";
 import MatrixAnimation from "@/components/matrix-animation";
+import { DecodeText } from "../decode-text";
 
 export function CertificatesSection() {
   return (
@@ -16,7 +17,7 @@ export function CertificatesSection() {
       </div>
       <div className="container relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">Licenses & Certifications</h2>
+          <DecodeText text="Licenses & Certifications" className="text-3xl md:text-4xl font-headline font-bold" />
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             Here are some of my licenses and certifications.
           </p>

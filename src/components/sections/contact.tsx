@@ -6,6 +6,7 @@ import { socialLinks } from '@/config/site';
 import Link from 'next/link';
 import { Linkedin, Mail } from 'lucide-react';
 import MatrixAnimation from '@/components/matrix-animation';
+import { DecodeText } from '../decode-text';
 
 export function ContactSection() {
   const emailLink = socialLinks.find(link => link.name === 'Email');
@@ -19,7 +20,7 @@ export function ContactSection() {
         </div>
         <div className="container relative z-10">
             <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Get In Touch</h2>
+            <DecodeText text="Get In Touch" className="text-3xl md:text-4xl font-headline font-bold" />
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
             </p>

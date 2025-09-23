@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { experiences } from "@/config/site";
 import { Briefcase } from "lucide-react";
 import MatrixAnimation from "@/components/matrix-animation";
+import { DecodeText } from "../decode-text";
 
 
 export function ExperienceSection() {
@@ -14,7 +15,7 @@ export function ExperienceSection() {
       </div>
       <div className="container relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">Work Experience</h2>
+          <DecodeText text="Work Experience" className="text-3xl md:text-4xl font-headline font-bold" />
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             My professional journey and key accomplishments.
           </p>
