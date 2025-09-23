@@ -98,7 +98,7 @@ export default {
         },
         'grid-pan': {
           '0%': { backgroundPosition: '0% 0%' },
-          '100%': { backgroundPosition: '40px 40px' },
+          '100%': { backgroundPosition: '20px 20px' },
         },
       },
       animation: {
