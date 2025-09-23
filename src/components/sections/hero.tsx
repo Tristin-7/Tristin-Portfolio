@@ -22,13 +22,16 @@ export function HeroSection({ setActiveSection }: HeroSectionProps) {
       <div className="container relative z-10 flex flex-col items-center text-center gap-10">
         <div className="animate-in fade-in-0 zoom-in-95 duration-1000">
           <div className="relative w-[300px] h-[300px] group">
-            <div className={cn("absolute -inset-1 rounded-full", isCreative && 'bg-primary')}></div>
             <Image
               src={isCreative ? "/profile-Photoroomblack.png" : "/profile.jpg"}
               alt="Your Name"
               width={300}
               height={300}
-              className="relative rounded-full object-cover aspect-square"
+              className={cn(
+                "relative rounded-full object-cover aspect-square",
+                isCreative && "shadow-[0_0_40px_0px_hsl(var(--primary)/0.6)]"
+              )}
+              style={isCreative ? { filter: 'brightness(1.1) contrast(1.1)' } : {}}
               priority
               data-ai-hint="professional person"
             />
