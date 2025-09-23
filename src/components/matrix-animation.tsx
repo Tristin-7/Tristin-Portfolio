@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
@@ -32,7 +33,7 @@ const MatrixAnimation: React.FC = () => {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+-=[]{}|;:",.<>?';
+    const characters = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
     const columns = Math.floor(canvas.width / 20);
     const drops = Array(columns).fill(1).map(() => Math.floor(Math.random() * canvas.height));
     let primaryH, primaryS, primaryL;
