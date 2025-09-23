@@ -24,7 +24,7 @@ export function HeroSection({ setActiveSection }: HeroSectionProps) {
           <div className="relative w-[300px] h-[300px] group">
             <div className={cn("absolute -inset-1.5 rounded-full", isCreative && 'bg-primary')}></div>
             <Image
-              src="/profile-Photoroomblack.png"
+              src={isCreative ? "/profile-Photoroomblack.png" : "/profile.jpg"}
               alt="Your Name"
               width={300}
               height={300}
