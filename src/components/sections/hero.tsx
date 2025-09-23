@@ -22,7 +22,7 @@ export function HeroSection({ setActiveSection }: HeroSectionProps) {
       <div className="container relative z-10 flex flex-col items-center text-center gap-10">
         <div className="animate-in fade-in-0 zoom-in-95 duration-1000">
           <div className="relative w-[300px] h-[300px] group">
-            <div className={cn("absolute -inset-1.5 rounded-full", isCreative && 'bg-primary')}></div>
+            <div className={cn("absolute -inset-1 rounded-full", isCreative && 'bg-primary')}></div>
             <Image
               src={isCreative ? "/profile-Photoroomblack.png" : "/profile.jpg"}
               alt="Your Name"
