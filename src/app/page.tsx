@@ -107,7 +107,7 @@ export default function Home() {
   const shouldAnimate = isCreative && isTransitioning;
 
   return (
-    <div className={cn("flex min-h-screen flex-col", isCreative ? 'bg-background/80' : 'bg-background')}>
+    <div className={cn("flex min-h-screen flex-col", isCreative ? 'bg-transparent' : 'bg-background')}>
       <SiteHeader activeSection={activeSection} setActiveSection={handleSectionChange} />
       <main className="flex-1 flex flex-col">
         <div 
