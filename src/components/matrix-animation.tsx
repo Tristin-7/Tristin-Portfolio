@@ -1,11 +1,18 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const MatrixAnimation: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -68,7 +75,7 @@ const MatrixAnimation: React.FC = () => {
 
     const observer = new MutationObserver((mutations) => {
         for (const mutation of mutations) {
-            if (mutation.attributeName === 'class') {
+            if (mutation.attributeName === 'data-theme') {
                 getPrimaryColor();
             }
         }
@@ -84,7 +91,11 @@ const MatrixAnimation: React.FC = () => {
       window.removeEventListener('resize', resizeCanvas);
       observer.disconnect();
     };
-  }, []);
+  }, [isClient]);
+
+  if (!isClient) {
+    return null;
+  }
 
   return <canvas ref={canvasRef} className="absolute inset-0 z-0 w-full h-full" />;
 };
