@@ -1,0 +1,38 @@
+
+body {
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: hsl(var(--primary));
+  box-shadow: 0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary));
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+}
+
+.particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.particle {
+  position: absolute;
+  font-size: 14px;
+  font-family: monospace;
+  will-change: transform, opacity;
+  pointer-events: none;
+  user-select: none;
+  text-shadow: 0 0 5px hsl(var(--primary));
+}

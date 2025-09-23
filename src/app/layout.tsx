@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 import './glitch.css';
 import './magnetic.css';
+import './cursor.css';
 import { Toaster } from '@/components/ui/toaster';
 import MatrixAnimation from '@/components/matrix-animation';
 import { Chatbot } from '@/components/chatbot';
+import { CustomCursor } from '@/components/custom-cursor';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -25,6 +27,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <MatrixAnimation />
+        <CustomCursor />
         <div className="relative z-10">
           {children}
         </div>
