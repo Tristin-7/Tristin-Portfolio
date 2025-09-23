@@ -9,7 +9,6 @@ body {
 }
 
 html[data-theme='matrix'] body {
-  background-image: linear-gradient(hsl(var(--primary)) 0.5px, transparent 0.5px), linear-gradient(to right, hsl(var(--primary)) 0.5px, hsl(var(--background)) 0.5px);
   background-size: 20px 20px;
 }
 
