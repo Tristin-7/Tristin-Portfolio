@@ -1,7 +1,7 @@
 import type {Config} from 'tailwindcss';
 
 export default {
-  darkMode: ['class'],
+  darkMode: ['class', '[data-theme="matrix"]'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -20,6 +20,7 @@ export default {
         body: ['Orbitron', 'sans-serif'],
         headline: ['Orbitron', 'sans-serif'],
         code: ['monospace'],
+        sans: ['Inter', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

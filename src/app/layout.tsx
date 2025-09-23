@@ -3,8 +3,9 @@ import './globals.css';
 import './glitch.css';
 import './magnetic.css';
 import { Toaster } from '@/components/ui/toaster';
-import MatrixAnimation from '@/components/matrix-animation';
 import { Chatbot } from '@/components/chatbot';
+import { ThemeProvider } from '@/components/theme-provider';
+import { SiteBody } from '@/components/site-body';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -17,19 +18,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased">
-        <MatrixAnimation />
-        <div className="relative z-10">
-          {children}
-        </div>
-        <Chatbot />
-        <Toaster />
+      <body>
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="matrix"
+          enableSystem={false}
+          storageKey="portfolio-theme"
+        >
+          <SiteBody>
+            {children}
+          </SiteBody>
+          <Chatbot />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

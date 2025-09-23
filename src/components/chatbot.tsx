@@ -7,6 +7,8 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Bot, X, Send, User, Loader2 } from 'lucide-react';
 import { portfolioChat, PortfolioChatInput } from '@/ai/flows/portfolio-chat-flow';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import { useTheme } from 'next-themes';
+import { cn } from '@/lib/utils';
 
 type Message = {
   role: 'user' | 'model';
@@ -19,6 +21,7 @@ export function Chatbot() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
   const toggleChat = () => setIsOpen(!isOpen);
 
@@ -75,7 +78,7 @@ export function Chatbot() {
       </Button>
 
       {isOpen && (
-        <Card className="fixed bottom-24 right-4 w-full max-w-sm sm:w-80 h-[28rem] flex flex-col shadow-lg z-50 bg-background/90 backdrop-blur-sm">
+        <Card className={cn("fixed bottom-24 right-4 w-full max-w-sm sm:w-80 h-[28rem] flex flex-col shadow-lg z-50", theme === 'matrix' ? 'bg-background/90 backdrop-blur-sm' : 'bg-background')}>
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle className="font-headline text-lg flex items-center gap-2">
               <Bot /> AI Assistant

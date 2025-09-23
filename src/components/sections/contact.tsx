@@ -5,19 +5,18 @@ import { Button } from '@/components/ui/button';
 import { socialLinks } from '@/config/site';
 import Link from 'next/link';
 import { Linkedin, Mail } from 'lucide-react';
-import MatrixAnimation from '@/components/matrix-animation';
 import { DecodeText } from '../decode-text';
+import { useTheme } from 'next-themes';
+import { cn } from '@/lib/utils';
 
 export function ContactSection() {
   const emailLink = socialLinks.find(link => link.name === 'Email');
   const linkedinLink = socialLinks.find(link => link.name === 'LinkedIn');
+  const { theme } = useTheme();
+  const isMatrix = theme === 'matrix';
 
   return (
-    <section id="contact" className="relative py-16 md:py-24 bg-transparent overflow-hidden flex-1 flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-            <MatrixAnimation />
-            <div className="absolute inset-0 bg-black/80" />
-        </div>
+    <section id="contact" className={cn("relative py-16 md:py-24 overflow-hidden flex-1 flex items-center justify-center", isMatrix ? 'bg-transparent' : 'bg-background')}>
         <div className="container relative z-10">
             <div className="text-center mb-12">
             <DecodeText text="Get In Touch" className="text-3xl md:text-4xl font-headline font-bold" />

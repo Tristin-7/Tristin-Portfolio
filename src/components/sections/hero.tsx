@@ -1,8 +1,11 @@
 
+'use client'
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import MatrixAnimation from '@/components/matrix-animation';
 import { DecodeText } from '../decode-text';
+import { useTheme } from 'next-themes';
+import { cn } from '@/lib/utils';
 
 type Section = 'hero' | 'skills' | 'experience' | 'education' | 'projects' | 'certificates' | 'contact';
 
@@ -10,19 +13,16 @@ interface HeroSectionProps {
   setActiveSection: (section: Section) => void;
 }
 
-
 export function HeroSection({ setActiveSection }: HeroSectionProps) {
-  return (
-    <section className="relative py-20 md:py-32 bg-transparent overflow-hidden flex-1 flex items-center justify-center">
-      <div className="absolute inset-0 z-0">
-        <MatrixAnimation />
-        <div className="absolute inset-0 bg-black/80" />
-      </div>
+  const { theme } = useTheme();
+  const isMatrix = theme === 'matrix';
 
+  return (
+    <section className={cn("relative py-20 md:py-32 overflow-hidden flex-1 flex items-center justify-center", isMatrix ? 'bg-transparent' : 'bg-background')}>
       <div className="container relative z-10 flex flex-col items-center text-center gap-10">
         <div className="animate-in fade-in-0 zoom-in-95 duration-1000">
           <div className="relative w-[300px] h-[300px] group">
-            <div className="absolute -inset-1.5 bg-primary rounded-full"></div>
+            <div className={cn("absolute -inset-1.5 rounded-full", isMatrix && 'bg-primary')}></div>
             <Image
               src="/profile-Photoroomblack.png"
               alt="Your Name"

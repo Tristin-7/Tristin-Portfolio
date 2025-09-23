@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { navItems } from '@/config/site';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from './theme-toggle';
 
 type Section = 'hero' | 'skills' | 'experience' | 'education' | 'projects' | 'certificates' | 'contact';
 
@@ -50,6 +51,7 @@ export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps)
         </nav>
         
         <div className="hidden md:flex flex-1 items-center justify-end space-x-4">
+          <ThemeToggle />
           <Button asChild>
             <a href="/TristinResume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
           </Button>
@@ -86,6 +88,9 @@ export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps)
                  <Button asChild className="mt-4">
                   <a href="/TristinResume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
                 </Button>
+                <div className="pt-4">
+                  <ThemeToggle />
+                </div>
               </div>
             </SheetContent>
           </Sheet>

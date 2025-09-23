@@ -1,4 +1,6 @@
 
+'use client'
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -6,12 +8,15 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { projects } from '@/config/site';
 import type { Project } from '@/lib/types';
 import { ExternalLink } from 'lucide-react';
-import MatrixAnimation from "@/components/matrix-animation";
 import { DecodeText } from '../decode-text';
+import { useTheme } from 'next-themes';
+import { cn } from '@/lib/utils';
 
 function ProjectCard({ project, index }: { project: Project, index: number }) {
+  const { theme } = useTheme();
+  const isMatrix = theme === 'matrix';
   return (
-    <Card className="flex flex-col overflow-hidden animate-in fade-in-0 zoom-in-95 duration-500 bg-background/80" style={{transitionDelay: `${index * 150}ms`}}>
+    <Card className={cn("flex flex-col overflow-hidden animate-in fade-in-0 zoom-in-95 duration-500", isMatrix ? 'bg-background/80' : 'bg-card')} style={{transitionDelay: `${index * 150}ms`}}>
       <div className="relative aspect-video">
         <Image
           src={project.imageUrl}
@@ -43,12 +48,11 @@ function ProjectCard({ project, index }: { project: Project, index: number }) {
 
 
 export function ProjectsSection() {
+  const { theme } = useTheme();
+  const isMatrix = theme === 'matrix';
+
   return (
-    <section id="projects" className="relative py-16 md:py-24 bg-transparent overflow-hidden flex-1 flex items-center justify-center">
-      <div className="absolute inset-0 z-0">
-        <MatrixAnimation />
-        <div className="absolute inset-0 bg-black/80" />
-      </div>
+    <section id="projects" className={cn("relative py-16 md:py-24 overflow-hidden flex-1 flex items-center justify-center", isMatrix ? 'bg-transparent' : 'bg-background')}>
       <div className="container relative z-10">
         <div className="text-center mb-12">
           <DecodeText text="Featured Projects" className="text-3xl md:text-4xl font-headline font-bold" />

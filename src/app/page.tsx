@@ -13,6 +13,7 @@ import { CertificatesSection } from '@/components/sections/certificates';
 import { EducationSection } from '@/components/sections/education';
 import { cn } from '@/lib/utils';
 import { navItems } from '@/config/site';
+import { useTheme } from 'next-themes';
 
 type Section = 'hero' | 'skills' | 'experience' | 'education' | 'projects' | 'certificates' | 'contact';
 
@@ -24,6 +25,7 @@ export default function Home() {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
   const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
+  const { theme } = useTheme();
 
   const handleSectionChange = (section: Section, event?: React.MouseEvent | KeyboardEvent) => {
     if (section !== activeSection && !isTransitioning) {
@@ -88,7 +90,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-background/80">
+    <div className={cn("flex min-h-screen flex-col", theme === 'matrix' ? 'bg-background/80' : 'bg-background')}>
       <SiteHeader activeSection={activeSection} setActiveSection={handleSectionChange} />
       <main className="flex-1 flex flex-col">
         <div 

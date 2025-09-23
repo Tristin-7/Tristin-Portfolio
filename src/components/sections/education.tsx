@@ -1,17 +1,19 @@
 
+'use client'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { education } from "@/config/site";
 import { GraduationCap } from "lucide-react";
-import MatrixAnimation from "@/components/matrix-animation";
 import { DecodeText } from "../decode-text";
+import { useTheme } from "next-themes";
+import { cn } from "@/lib/utils";
 
 export function EducationSection() {
+  const { theme } = useTheme();
+  const isMatrix = theme === 'matrix';
+
   return (
-    <section id="education" className="relative py-16 md:py-24 bg-transparent overflow-hidden flex-1 flex items-center justify-center">
-      <div className="absolute inset-0 z-0">
-        <MatrixAnimation />
-        <div className="absolute inset-0 bg-black/80" />
-      </div>
+    <section id="education" className={cn("relative py-16 md:py-24 overflow-hidden flex-1 flex items-center justify-center", isMatrix ? 'bg-transparent' : 'bg-background')}>
       <div className="container relative z-10">
         <div className="text-center mb-12">
           <DecodeText text="Education" className="text-3xl md:text-4xl font-headline font-bold" />
@@ -21,7 +23,7 @@ export function EducationSection() {
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           {education.map((edu, index) => (
-            <Card key={index} className="animate-in fade-in-0 zoom-in-95 duration-500 bg-background/80" style={{transitionDelay: `${index * 150}ms`}}>
+            <Card key={index} className={cn("animate-in fade-in-0 zoom-in-95 duration-500", isMatrix ? 'bg-background/80' : 'bg-card')} style={{transitionDelay: `${index * 150}ms`}}>
               <CardHeader>
                 <div className="flex items-start justify-between">
                     <div className="space-y-1.5">
