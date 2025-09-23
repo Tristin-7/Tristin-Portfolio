@@ -29,10 +29,10 @@ function SkillCategory({ title, skills }: { title: string, skills: Skill[] }) {
 
 export function SkillsSection() {
   const { theme } = useTheme();
-  const isMatrix = theme === 'matrix';
+  const isCreative = theme === 'creative';
 
   return (
-    <section id="skills" className={cn("relative py-16 md:py-24 overflow-hidden flex-1 flex items-center justify-center", isMatrix ? 'bg-transparent' : 'bg-background')}>
+    <section id="skills" className={cn("relative py-16 md:py-24 overflow-hidden flex-1 flex items-center justify-center", isCreative ? 'bg-transparent' : 'bg-background')}>
       <div className="container relative z-10">
         <div className="text-center mb-12">
           <DecodeText text="My Skillset" className="text-3xl md:text-4xl font-headline font-bold" />

@@ -10,10 +10,10 @@ import { cn } from "@/lib/utils";
 
 export function ExperienceSection() {
   const { theme } = useTheme();
-  const isMatrix = theme === 'matrix';
+  const isCreative = theme === 'creative';
 
   return (
-    <section id="experience" className={cn("relative py-16 md:py-24 overflow-hidden flex-1 flex items-center justify-center", isMatrix ? 'bg-transparent' : 'bg-background')}>
+    <section id="experience" className={cn("relative py-16 md:py-24 overflow-hidden flex-1 flex items-center justify-center", isCreative ? 'bg-transparent' : 'bg-background')}>
       <div className="container relative z-10">
         <div className="text-center mb-12">
           <DecodeText text="Work Experience" className="text-3xl md:text-4xl font-headline font-bold" />
@@ -24,9 +24,9 @@ export function ExperienceSection() {
         <div className="max-w-3xl mx-auto">
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <Card key={index} className={cn("animate-in fade-in-0 zoom-in-95 duration-500", isMatrix ? 'bg-background/80' : 'bg-card')}>
+              <Card key={index} className={cn("animate-in fade-in-0 zoom-in-95 duration-500", isCreative ? 'bg-background/80' : 'bg-card')}>
                 <CardHeader className="items-center text-center">
-                  <div className={cn("p-2 rounded-full", isMatrix ? 'bg-secondary' : 'bg-primary/10')}>
+                  <div className={cn("p-2 rounded-full", isCreative ? 'bg-secondary' : 'bg-primary/10')}>
                     <Briefcase className="w-6 h-6 text-primary" />
                   </div>
                   <div className="space-y-1.5">

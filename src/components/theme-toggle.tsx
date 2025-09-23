@@ -16,7 +16,7 @@ export function ThemeToggle() {
   }, [])
 
   const toggleTheme = () => {
-    setTheme(theme === "matrix" ? "professional" : "matrix")
+    setTheme(theme === "creative" ? "professional" : "creative")
   }
 
   if (!mounted) {
@@ -26,11 +26,11 @@ export function ThemeToggle() {
   return (
     <div className="flex items-center space-x-2">
       <Label htmlFor="theme-switch">
-        {theme === "matrix" ? "Matrix Mode" : "Professional Mode"}
+        {theme === "creative" ? "Creative Mode" : "Professional Mode"}
       </Label>
       <Switch
         id="theme-switch"
-        checked={theme !== "matrix"}
+        checked={theme !== "creative"}
         onCheckedChange={toggleTheme}
         aria-label="Toggle theme"
       />

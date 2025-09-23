@@ -15,14 +15,14 @@ interface HeroSectionProps {
 
 export function HeroSection({ setActiveSection }: HeroSectionProps) {
   const { theme } = useTheme();
-  const isMatrix = theme === 'matrix';
+  const isCreative = theme === 'creative';
 
   return (
-    <section className={cn("relative py-20 md:py-32 overflow-hidden flex-1 flex items-center justify-center", isMatrix ? 'bg-transparent' : 'bg-background')}>
+    <section className={cn("relative py-20 md:py-32 overflow-hidden flex-1 flex items-center justify-center", isCreative ? 'bg-transparent' : 'bg-background')}>
       <div className="container relative z-10 flex flex-col items-center text-center gap-10">
         <div className="animate-in fade-in-0 zoom-in-95 duration-1000">
           <div className="relative w-[300px] h-[300px] group">
-            <div className={cn("absolute -inset-1.5 rounded-full", isMatrix && 'bg-primary')}></div>
+            <div className={cn("absolute -inset-1.5 rounded-full", isCreative && 'bg-primary')}></div>
             <Image
               src="/profile-Photoroomblack.png"
               alt="Your Name"

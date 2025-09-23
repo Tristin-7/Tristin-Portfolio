@@ -12,10 +12,10 @@ export function SiteBody({ children }: { children: React.ReactNode }) {
     setMounted(true)
   }, [])
 
-  const isMatrix = theme === 'matrix';
+  const isCreative = theme === 'creative';
 
   return (
-    <div className={cn("antialiased", mounted && isMatrix ? 'font-body' : 'font-sans')}>
+    <div className={cn("antialiased", mounted && isCreative ? 'font-body' : 'font-sans')}>
       <div className="relative z-10">
         {children}
       </div>

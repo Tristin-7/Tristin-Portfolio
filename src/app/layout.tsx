@@ -27,7 +27,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider
           attribute="data-theme"
-          defaultTheme="matrix"
+          defaultTheme="creative"
           enableSystem={false}
           storageKey="portfolio-theme"
         >

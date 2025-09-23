@@ -11,10 +11,10 @@ import { cn } from "@/lib/utils";
 
 export function CertificatesSection() {
   const { theme } = useTheme();
-  const isMatrix = theme === 'matrix';
+  const isCreative = theme === 'creative';
 
   return (
-    <section id="certificates" className={cn("relative py-16 md:py-24 overflow-hidden flex-1 flex items-center justify-center", isMatrix ? 'bg-transparent' : 'bg-background')}>
+    <section id="certificates" className={cn("relative py-16 md:py-24 overflow-hidden flex-1 flex items-center justify-center", isCreative ? 'bg-transparent' : 'bg-background')}>
       <div className="container relative z-10">
         <div className="text-center mb-12">
           <DecodeText text="Licenses & Certifications" className="text-3xl md:text-4xl font-headline font-bold" />
@@ -24,7 +24,7 @@ export function CertificatesSection() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificates.map((cert, index) => (
-            <Card key={index} className={cn("flex flex-col animate-in fade-in-0 zoom-in-95 duration-500 h-full hover:shadow-lg transition-shadow", isMatrix ? 'bg-background/80' : 'bg-card')} style={{transitionDelay: `${index * 150}ms`}}>
+            <Card key={index} className={cn("flex flex-col animate-in fade-in-0 zoom-in-95 duration-500 h-full hover:shadow-lg transition-shadow", isCreative ? 'bg-background/80' : 'bg-card')} style={{transitionDelay: `${index * 150}ms`}}>
               <CardHeader>
                 <CardTitle className="font-headline text-lg">{cert.name}</CardTitle>
               </CardHeader>
