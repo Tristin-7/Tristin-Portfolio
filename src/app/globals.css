@@ -10,6 +10,8 @@ body {
 
 html[data-theme='creative'] body {
   background-color: hsl(var(--background));
+  background-image: radial-gradient(hsla(var(--primary), 0.2) 1px, transparent 1px);
+  background-size: 16px 16px;
 }
 
 html[data-theme='professional'] body {
