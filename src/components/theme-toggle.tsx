@@ -16,7 +16,9 @@ export function ThemeToggle() {
 
   return (
     <div className="flex items-center space-x-2">
-      <Label htmlFor="theme-switch">Professional Mode</Label>
+      <Label htmlFor="theme-switch">
+        {theme === "matrix" ? "Professional Mode" : "Matrix Mode"}
+      </Label>
       <Switch
         id="theme-switch"
         checked={theme !== "matrix"}
