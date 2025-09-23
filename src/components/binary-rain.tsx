@@ -38,7 +38,7 @@ export function BinaryRain() {
 
     function draw() {
       if (!ctx) return;
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
       ctx.fillRect(0, 0, width, height);
 
       ctx.fillStyle = primaryColor;
@@ -55,7 +55,7 @@ export function BinaryRain() {
       }
     }
 
-    const interval = setInterval(draw, 50);
+    const interval = setInterval(draw, 70);
 
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
