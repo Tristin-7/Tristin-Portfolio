@@ -16,7 +16,11 @@ export function EducationSection() {
     <section id="education" className={cn("relative py-16 md:py-24 overflow-hidden flex-1 flex items-center justify-center", isCreative ? 'bg-transparent' : 'bg-background')}>
       <div className="container relative z-10">
         <div className="text-center mb-12">
-          <DecodeText text="Education" className="text-3xl md:text-4xl font-headline font-bold" />
+          {isCreative ? (
+            <DecodeText text="Education" className="text-3xl md:text-4xl font-headline font-bold" />
+          ) : (
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Education</h2>
+          )}
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             My academic background and qualifications.
           </p>

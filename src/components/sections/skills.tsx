@@ -35,7 +35,11 @@ export function SkillsSection() {
     <section id="skills" className={cn("relative py-16 md:py-24 overflow-hidden flex-1 flex items-center justify-center", isCreative ? 'bg-transparent' : 'bg-background')}>
       <div className="container relative z-10">
         <div className="text-center mb-12">
-          <DecodeText text="My Skillset" className="text-3xl md:text-4xl font-headline font-bold" />
+          {isCreative ? (
+            <DecodeText text="My Skillset" className="text-3xl md:text-4xl font-headline font-bold" />
+          ) : (
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">My Skillset</h2>
+          )}
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">A glimpse into the technologies I work with and my professional abilities.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
