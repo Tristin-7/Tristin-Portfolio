@@ -4,7 +4,7 @@
 import React from 'react';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { navItems } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from './theme-toggle';
@@ -66,6 +66,10 @@ export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps)
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
+              <SheetDescription className="sr-only">
+                Main navigation menu for the portfolio site.
+              </SheetDescription>
               <div className="flex flex-col space-y-4 mt-8">
                 <SheetClose asChild>
                   <button onClick={handleLogoClick} className="mr-6 flex items-center space-x-2 text-left">
