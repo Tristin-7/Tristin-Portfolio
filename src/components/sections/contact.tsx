@@ -27,6 +27,9 @@ export function ContactSection() {
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
             </p>
+            <p className="mt-2 text-md text-muted-foreground max-w-2xl mx-auto">
+                Feel free to send me an email.
+            </p>
             </div>
             <div className="max-w-md mx-auto flex flex-col items-center gap-6">
                 {linkedinLink && (
