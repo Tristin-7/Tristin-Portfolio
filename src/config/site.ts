@@ -37,7 +37,7 @@ export const projects: Project[] = [
     description: 'A web application that analyzes news headlines and determines the sentiment of the news. Built with Firebase Studio',
     imageUrl: '/chatbot.png',
     imageHint: 'news sentiment',
-    demoUrl: 'https://tristinssentimentnavigator.netlify.app/',
+    demoUrl: 'https://tristin-7.github.io/AI-Chatbot/',
   },
 ];
 
