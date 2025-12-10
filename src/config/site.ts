@@ -33,10 +33,10 @@ export const projects: Project[] = [
     demoUrl: 'https://tristin-7.github.io/System-Syncers-AI-Resume-Builder/',
   },
   {
-    title: 'News Sentiment Navigator',
-    description: 'A web application that analyzes news headlines and determines the sentiment of the news. Built with Firebase Studio',
+    title: 'AI Chatbot',
+    description: 'An intelligent chatbot assistant built to answer questions about this portfolio, leveraging generative AI.',
     imageUrl: '/chatbot.png',
-    imageHint: 'news sentiment',
+    imageHint: 'ai chatbot',
     demoUrl: 'https://tristin-7.github.io/AI-Chatbot/',
   },
 ];
