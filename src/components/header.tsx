@@ -53,7 +53,7 @@ export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps)
         <div className="hidden md:flex flex-1 items-center justify-end space-x-4">
           <ThemeToggle />
           <Button asChild>
-            <a href="/TristinResume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
+            <a href="/TristinVDLResume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
           </Button>
         </div>
 
@@ -90,7 +90,7 @@ export function SiteHeader({ activeSection, setActiveSection }: SiteHeaderProps)
                   </SheetClose>
                 ))}
                  <Button asChild className="mt-4">
-                  <a href="/TristinResume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
+                  <a href="/TristinVDLResume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
                 </Button>
                 <div className="pt-4">
                   <ThemeToggle />
