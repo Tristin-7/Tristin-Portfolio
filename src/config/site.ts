@@ -107,7 +107,7 @@ export const education: Education[] = [
 export const technicalSkills: Skill[] = [
   { name: 'System Support & Troubleshooting', level: 90 },
   { name: 'Html/CSS', level: 90 },
-  { name: 'Machine Learning Fundamentals', level: 80 },
+  { name: 'Machine Learning Fundamentals', level: 90 },
   { name: 'Artificial Intelligence', level: 90 },
   { name: 'Cloud Computing Basics', level: 80 },
   { name: 'Javascript', level: 85 },
