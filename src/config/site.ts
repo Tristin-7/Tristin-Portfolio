@@ -35,7 +35,7 @@ export const projects: Project[] = [
   {
     title: 'AI Chatbot',
     description: 'This chatbot is built using Dialogflow ES and focuses on providing information and interactions related to artificial intelligence (AI).',
-    imageUrl: '/chatbot.png',
+    imageUrl: '/Chatbot Updated.png',
     imageHint: 'ai chatbot',
     demoUrl: 'https://tristin-7.github.io/AI-Chatbot/',
   },
