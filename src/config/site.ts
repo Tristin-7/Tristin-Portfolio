@@ -14,7 +14,7 @@ export const navItems: NavItem[] = [
 export const socialLinks: SocialLink[] = [
   { name: 'GitHub', url: 'https://github.com/Tristin-7', icon: Github },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/tristin-van-der-lingen-95a067350/', icon: Linkedin },
-  { name: 'Email', url: 'https://mail.google.com/mail/?view=cm&fs=1&to=vanderlingentristin3@gmail.com', icon: Mail },
+  { name: 'Email', url: 'mailto:vanderlingentristin3@gmail.com', icon: Mail },
 ];
 
 export const projects: Project[] = [
@@ -34,7 +34,7 @@ export const projects: Project[] = [
   },
   {
     title: 'AI Chatbot',
-    description: 'This chatbot is built using Dialogflow ES and focuses on providing information and interactions related to artificial intelligence (AI). It can understand user queries about AI concepts, answer questions, and simulate natural conversation in real-time through a web-based chat interface.',
+    description: 'This chatbot is built using Dialogflow ES and focuses on providing information and interactions related to artificial intelligence (AI).',
     imageUrl: '/chatbot.png',
     imageHint: 'ai chatbot',
     demoUrl: 'https://tristin-7.github.io/AI-Chatbot/',
