@@ -52,6 +52,24 @@ export const experiences: Experience[] = [
 
 export const certificates: Certificate[] = [
   {
+    name: 'Placeholder Certificate 1',
+    imageUrl: 'https://picsum.photos/seed/placeholder-1/600/400',
+    imageHint: 'placeholder image',
+    verifyUrl: '#',
+  },
+  {
+    name: 'Placeholder Certificate 2',
+    imageUrl: 'https://picsum.photos/seed/placeholder-2/600/400',
+    imageHint: 'placeholder image',
+    verifyUrl: '#',
+  },
+  {
+    name: 'Placeholder Certificate 3',
+    imageUrl: 'https://picsum.photos/seed/placeholder-3/600/400',
+    imageHint: 'placeholder image',
+    verifyUrl: '#',
+  },
+  {
     name: 'AI Foundations',
     imageUrl: '/AIFoundations.png',
     imageHint: 'ai foundations',
