@@ -23,7 +23,7 @@ export function CertificatesSection() {
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Licenses & Certifications</h2>
           )}
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Here are some of my licenses and certifications.
+            Scroll through some of my licenses and certifications.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
