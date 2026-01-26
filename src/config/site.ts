@@ -55,7 +55,7 @@ export const certificates: Certificate[] = [
     name: 'Technical Support Fundamentals',
     imageUrl: '/Technical Support Fundamentals.png',
     imageHint: 'technical support',
-    verifyUrl: 'https://www.coursera.org/account/accomplishments/certificate/MHZBP5015J2F',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/MHZBP5015J2F',
   },
   {
     name: 'Placeholder Certificate 2',
