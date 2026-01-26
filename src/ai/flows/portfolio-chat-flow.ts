@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -35,7 +36,7 @@ export type PortfolioChatOutput = z.infer<typeof PortfolioChatOutputSchema>;
 
 const portfolioInfo = `
   About Tristin Van Der Lingen:
-  I am a Systems Support Associate with a strong interest in technology and continuous learning. I am currently enhancing my skills through Coursera courses in machine learning, Python, AI, professional communications, and professional development, while actively working on practical AI projects such as an AI resume builder as part of an AI bootcamp. My goal is to leverage these skills and project experience to contribute to innovative technology solutions and further develop my expertise in AI and related fields.
+  I am a Systems Support Associate with a strong background in IT support and a keen interest in technology and continuous learning. I am currently enhancing my skills through Coursera courses in machine learning, AI, professional communications, and professional development, while actively working on practical AI projects such as an AI resume builder as part of an AI bootcamp. My goal is to leverage my IT support experience and project work to contribute to innovative technology solutions and further develop my expertise in AI and related fields.
 
   Nav Items: ${JSON.stringify(navItems)}
   Social Links: ${JSON.stringify(socialLinks)}
