@@ -52,10 +52,10 @@ export const experiences: Experience[] = [
 
 export const certificates: Certificate[] = [
   {
-    name: 'Placeholder Certificate 1',
-    imageUrl: 'https://picsum.photos/seed/placeholder-1/600/400',
-    imageHint: 'placeholder image',
-    verifyUrl: '#',
+    name: 'Technical Support Fundamentals',
+    imageUrl: '/Technical Support Fundamentals.png',
+    imageHint: 'technical support',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/certificate/MHZBP5015J2F',
   },
   {
     name: 'Placeholder Certificate 2',
