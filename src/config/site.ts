@@ -63,10 +63,10 @@ export const certificates: Certificate[] = [
     verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/W7XH4G34DMVT',
   },
   {
-    name: 'Placeholder Certificate 3',
-    imageUrl: 'https://picsum.photos/seed/placeholder-3/600/400',
-    imageHint: 'placeholder image',
-    verifyUrl: '#',
+    name: 'IT Security: Defense against the digital dark arts',
+    imageUrl: '/IT Security.png',
+    imageHint: 'it security',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/CAKWWCOS4BYY',
   },
   {
     name: 'AI Foundations',
