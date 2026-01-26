@@ -58,7 +58,7 @@ export const certificates: Certificate[] = [
   },
   {
     name: 'System Administrator',
-    imageUrl: '/System Adminstrator.png',
+    imageUrl: '/System Administrator.png',
     imageHint: 'system administrator',
     verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/W7XH4G34DMVT',
   },
