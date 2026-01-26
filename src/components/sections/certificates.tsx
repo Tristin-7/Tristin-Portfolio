@@ -29,7 +29,7 @@ export function CertificatesSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificates.map((cert, index) => (
             <Card key={index} className={cn("flex flex-col animate-in fade-in-0 zoom-in-95 duration-500 h-full hover:shadow-lg transition-shadow", isCreative ? 'bg-background/80' : 'bg-card')} style={{transitionDelay: `${index * 150}ms`}}>
-              <CardHeader>
+              <CardHeader className="min-h-[7rem]">
                 <CardTitle className="font-headline text-lg">{cert.name}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow flex items-center justify-center">
