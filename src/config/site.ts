@@ -1,4 +1,3 @@
-
 import type { NavItem, Project, Skill, SocialLink, Experience, Certificate, Education } from '@/lib/types';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
@@ -58,10 +57,10 @@ export const certificates: Certificate[] = [
     verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/MHZBP5015J2F',
   },
   {
-    name: 'Placeholder Certificate 2',
-    imageUrl: 'https://picsum.photos/seed/placeholder-2/600/400',
-    imageHint: 'placeholder image',
-    verifyUrl: '#',
+    name: 'System Administrator',
+    imageUrl: '/System Adminstrator.png',
+    imageHint: 'system administrator',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/verify/W7XH4G34DMVT',
   },
   {
     name: 'Placeholder Certificate 3',
